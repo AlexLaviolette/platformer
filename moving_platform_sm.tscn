@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://bn18hscy8ldtj"]
+
+[ext_resource type="Script" path="res://moving_platform.gd" id="1_ekauf"]
+
+[sub_resource type="GDScript" id="GDScript_ouf1d"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_djcfy"]
+size = Vector2(50, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b8wi8"]
+size = Vector2(50, 50)
+
+[sub_resource type="Animation" id="Animation_7nj8s"]
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(-1.56, -1.56),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_0knhc"]
+resource_name = "move"
+length = 2.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../PathFollow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(-1.56, -1.56),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y4pp2"]
+_data = {
+"RESET": SubResource("Animation_7nj8s"),
+"move": SubResource("Animation_0knhc")
+}
+
+[node name="Path2D" type="Path2D"]
+script = ExtResource("1_ekauf")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(6.67834, 0.0162096)
+rotation = 0.00242718
+progress = 6.69319
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D"]
+remote_path = NodePath("../../AnimatableBody2D")
+update_rotation = false
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+position = Vector2(6.67834, 0.0162096)
+rotation = 0.00242718
+script = SubResource("GDScript_ouf1d")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="AnimatableBody2D"]
+modulate = Color(0.0901961, 0.211765, 0.227451, 1)
+mesh = SubResource("QuadMesh_djcfy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+shape = SubResource("RectangleShape2D_b8wi8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../AnimatableBody2D")
+libraries = {
+"": SubResource("AnimationLibrary_y4pp2")
+}

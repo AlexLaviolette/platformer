@@ -1,0 +1,114 @@
+[gd_scene load_steps=8 format=3 uid="uid://blnnoifkkjd3w"]
+
+[ext_resource type="Script" path="res://collectible.gd" id="1_4qpt5"]
+[ext_resource type="Texture2D" uid="uid://boyeuyoqvxqhi" path="res://art/Flight_Bonus_04.png" id="1_qrnpx"]
+
+[sub_resource type="GDScript" id="GDScript_q77bp"]
+script/source = "extends Area2D
+
+signal collected
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func _on_body_entered(body):
+	hide() # Player disappears after being hit.
+	collected.emit()
+	# Must be deferred as we can't change physics properties on a physics callback.
+	$CollisionShape2D.set_deferred(\"disabled\", true)
+	print(\"I been hit bro\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qrtrd"]
+size = Vector2(515, 263)
+
+[sub_resource type="Animation" id="Animation_ut2dy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_5wep6"]
+resource_name = "float"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4, 0.8, 1.2),
+"transitions": PackedFloat32Array(0.42, 2.07, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(2.08165e-12, -45), Vector2(2.08165e-12, -13)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2, 0.6, 1.2),
+"transitions": PackedFloat32Array(0.42, 0.44, 1),
+"update": 0,
+"values": [0.0, 0.0698132, -0.0698132]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6e6hj"]
+_data = {
+"RESET": SubResource("Animation_ut2dy"),
+"float": SubResource("Animation_5wep6")
+}
+
+[node name="Collectible" type="Node2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_4qpt5")
+
+[node name="PickupArea" type="Area2D" parent="."]
+script = SubResource("GDScript_q77bp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea"]
+position = Vector2(-2.5, 1.5)
+shape = SubResource("RectangleShape2D_qrtrd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qrnpx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6e6hj")
+}
+autoplay = "float"
+speed_scale = 0.5
+
+[connection signal="body_entered" from="PickupArea" to="." method="_on_pickup_area_body_entered"]
