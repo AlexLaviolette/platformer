@@ -74,7 +74,7 @@ point_count = 9
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_jl6in")]
-position = Vector2(5113, -11514)
+position = Vector2(1918, -4865)
 scale = Vector2(2, 2)
 double_jump = true
 wall_jump = true
@@ -441,7 +441,7 @@ mesh = SubResource("QuadMesh_hov1o")
 shape = SubResource("RectangleShape2D_brtsr")
 
 [node name="MediumPlatform5" type="StaticBody2D" parent="."]
-position = Vector2(1779, -4769)
+position = Vector2(1830, -4769)
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -453,7 +453,7 @@ mesh = SubResource("QuadMesh_rtv3x")
 shape = SubResource("RectangleShape2D_5tyra")
 
 [node name="MediumPlatform6" type="StaticBody2D" parent="."]
-position = Vector2(284, -4769)
+position = Vector2(313, -4767)
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
