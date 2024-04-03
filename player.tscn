@@ -230,7 +230,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rmu26"]
-size = Vector2(21, 38)
+size = Vector2(24, 38)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(704, 826)
@@ -245,7 +245,7 @@ frame = 5
 frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 2.2)
+position = Vector2(-0.5, 2.20001)
 shape = SubResource("RectangleShape2D_rmu26")
 
 [node name="Camera2D" type="Camera2D" parent="."]
