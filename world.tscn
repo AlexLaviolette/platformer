@@ -74,10 +74,8 @@ point_count = 9
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_jl6in")]
-position = Vector2(1918, -4865)
-scale = Vector2(2, 2)
-double_jump = true
-wall_jump = true
+position = Vector2(719, 1017)
+scale = Vector2(2.2, 2.2)
 
 [node name="Platform" type="StaticBody2D" parent="."]
 position = Vector2(714, 1168)

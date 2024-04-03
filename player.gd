@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var max_speed = 600 # How fast the player will move (pixels/sec).
 @export var gravity = 30
-@export var jump_force = 625
+@export var jump_force = 635
 @export var acceleration = 60 # how quickly player accelerates with horizontal movement
 @export var jump_hover = 12 # Impact of holding space while jumping
 @export var wall_friction = 20 # When you have wall jump you "cling" to walls
