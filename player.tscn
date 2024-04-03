@@ -180,18 +180,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_fvsvp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_lphde")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fs712")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_a8g1j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qcxnu")
 }],
 "loop": false,
 "name": &"up",
@@ -252,8 +240,9 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_01gs1")
-animation = &"float"
-frame_progress = 0.326383
+animation = &"up"
+frame = 5
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, 2.2)

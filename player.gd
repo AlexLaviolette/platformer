@@ -47,12 +47,15 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -jump_force
+		$AnimatedSprite2D.animation = "up"
 		$AnimatedSprite2D.frame = 0
 	elif Input.is_action_just_pressed("jump") and wall_jump and is_wall_climing:
 		velocity.y = -jump_force
+		$AnimatedSprite2D.animation = "up"
 		$AnimatedSprite2D.frame = 0
 	elif Input.is_action_just_pressed("jump") and double_jump and extra_jumps > 0:
 		velocity.y = -jump_force
+		$AnimatedSprite2D.animation = "up"
 		$AnimatedSprite2D.frame = 0
 		extra_jumps -= 1
 	elif Input.is_action_pressed("jump"):
@@ -74,7 +77,7 @@ func _physics_process(delta):
 	else:
 		$AnimatedSprite2D.offset = Vector2(0, 0)
 		if velocity.y != 0:
-			play_jump_once()
+			check_for_floating()
 		elif velocity.x != 0:
 			$AnimatedSprite2D.animation = "walk"
 		else:
@@ -92,12 +95,11 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
-func play_jump_once():
-	$AnimatedSprite2D.animation = "up"
-	print($AnimatedSprite2D.sprite_frames.get_frame_count("up"))
-	print($AnimatedSprite2D.frame)
-	if $AnimatedSprite2D.sprite_frames.get_frame_count("up") == $AnimatedSprite2D.frame + 1:
-		$AnimatedSprite2D.pause()
+func check_for_floating():
+	if $AnimatedSprite2D.animation != "up":
+		$AnimatedSprite2D.animation = "float"
+	elif $AnimatedSprite2D.animation == "up" and $AnimatedSprite2D.sprite_frames.get_frame_count("up") == $AnimatedSprite2D.frame + 1:
+		$AnimatedSprite2D.animation = "float"
 
 func _on_double_jump_collected():
 	double_jump = true
