@@ -43,10 +43,13 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = -jump_force
+		$AnimatedSprite2D.frame = 0
 	elif Input.is_action_just_pressed("jump") and wall_jump and is_on_wall():
 		velocity.y = -jump_force
+		$AnimatedSprite2D.frame = 0
 	elif Input.is_action_just_pressed("jump") and double_jump and extra_jumps > 0:
 		velocity.y = -jump_force
+		$AnimatedSprite2D.frame = 0
 		extra_jumps -= 1
 	elif Input.is_action_pressed("jump"):
 		if velocity.y < 0:
@@ -54,20 +57,30 @@ func _physics_process(delta):
 	
 	var horizontal_direction = Input.get_axis("move_left", "move_right")
 	velocity.x = move_toward(velocity.x, max_speed * horizontal_direction, acceleration)
-
-	if velocity.length() > 0:
-		$AnimatedSprite2D.play()
-	else:
-		$AnimatedSprite2D.stop()
-
 	
-	if velocity.y != 0:
-		$AnimatedSprite2D.animation = "up"
-	elif velocity.x != 0:
-		$AnimatedSprite2D.animation = "walk"
-		$AnimatedSprite2D.flip_v = false
-		# See the note below about boolean assignment.
-		$AnimatedSprite2D.flip_h = velocity.x < 0
+	$AnimatedSprite2D.play()
+
+	if is_on_wall():
+		$AnimatedSprite2D.animation = "wall"
+		 # hug the wall
+		if velocity.x > 0:
+			$AnimatedSprite2D.offset = Vector2(5, 0)
+		else:
+			$AnimatedSprite2D.offset = Vector2(-5, 0)
+	else:
+		$AnimatedSprite2D.offset = Vector2(0, 0)
+		if velocity.y != 0:
+			$AnimatedSprite2D.animation = "up"
+		elif velocity.x != 0:
+			$AnimatedSprite2D.animation = "walk"
+		else:
+			$AnimatedSprite2D.animation = "idle"
+	
+	# Don't change direction if velocity is 0
+	if velocity.x > 0:
+		$AnimatedSprite2D.flip_h = false
+	elif velocity.x < 0:
+		$AnimatedSprite2D.flip_h = true
 	
 	move_and_slide()
 

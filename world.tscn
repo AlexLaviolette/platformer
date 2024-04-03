@@ -75,6 +75,7 @@ point_count = 9
 
 [node name="Player" parent="." instance=ExtResource("1_jl6in")]
 position = Vector2(5113, -11514)
+scale = Vector2(2, 2)
 double_jump = true
 wall_jump = true
 
@@ -961,6 +962,20 @@ modulate = Color(0.0901961, 0.211765, 0.227451, 1)
 mesh = SubResource("QuadMesh_hov1o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform27"]
+shape = SubResource("RectangleShape2D_brtsr")
+
+[node name="VertPlat9" type="StaticBody2D" parent="."]
+position = Vector2(5352, -11529)
+rotation = -1.5708
+metadata/_edit_group_ = true
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="VertPlat9"]
+modulate = Color(0.0901961, 0.211765, 0.227451, 1)
+scale = Vector2(0.5, 1)
+mesh = SubResource("QuadMesh_hov1o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="VertPlat9"]
+scale = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_brtsr")
 
 [node name="Platform28" type="StaticBody2D" parent="."]
