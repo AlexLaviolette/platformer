@@ -1,14 +1,17 @@
-[gd_scene load_steps=16 format=3 uid="uid://ynakmav11in0"]
+[gd_scene load_steps=19 format=3 uid="uid://ynakmav11in0"]
 
 [ext_resource type="PackedScene" uid="uid://ouvpieckk8x" path="res://player.tscn" id="1_jl6in"]
 [ext_resource type="PackedScene" uid="uid://j7sbw3pr7cy7" path="res://moving_platform.tscn" id="2_6xqyy"]
+[ext_resource type="Texture2D" uid="uid://svxmqe7a6fya" path="res://art/tilesheet_complete.png" id="2_nfb48"]
 [ext_resource type="PackedScene" uid="uid://blnnoifkkjd3w" path="res://collectible.tscn" id="3_lmjtp"]
 [ext_resource type="PackedScene" uid="uid://bn18hscy8ldtj" path="res://moving_platform_sm.tscn" id="4_rrrv2"]
-
-[sub_resource type="QuadMesh" id="QuadMesh_hov1o"]
-size = Vector2(500, 50)
+[ext_resource type="PackedScene" uid="uid://pp0m6ydq2nby" path="res://city_section.tscn" id="5_a2j1f"]
+[ext_resource type="TileSet" uid="uid://b5y1xrxu7sj4n" path="res://tile_set.tres" id="7_yokxk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brtsr"]
+size = Vector2(500, 50)
+
+[sub_resource type="QuadMesh" id="QuadMesh_hov1o"]
 size = Vector2(500, 50)
 
 [sub_resource type="QuadMesh" id="QuadMesh_rtv3x"]
@@ -74,20 +77,22 @@ point_count = 9
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_jl6in")]
-position = Vector2(719, 1017)
+position = Vector2(715.999, 950)
 scale = Vector2(2.2, 2.2)
+double_jump = true
+wall_jump = true
 
 [node name="Platform" type="StaticBody2D" parent="."]
 position = Vector2(714, 1168)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform"]
-modulate = Color(0.0901961, 0.211765, 0.227451, 1)
-mesh = SubResource("QuadMesh_hov1o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
 shape = SubResource("RectangleShape2D_brtsr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform"]
+scale = Vector2(2.6, 0.9)
+texture = ExtResource("2_nfb48")
+region_enabled = true
+region_rect = Rect2(320, 192, 192, 56)
 
 [node name="Platform2" type="StaticBody2D" parent="."]
 position = Vector2(1398, 1033)
@@ -574,7 +579,7 @@ position = Vector2(-225.5, 0)
 shape = SubResource("RectangleShape2D_ny1rt")
 
 [node name="SmallPlatform13" type="StaticBody2D" parent="."]
-position = Vector2(1554, -6176)
+position = Vector2(1481, -6176)
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
@@ -986,6 +991,14 @@ mesh = SubResource("QuadMesh_hov1o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform28"]
 shape = SubResource("RectangleShape2D_brtsr")
+
+[node name="CitySection" parent="." instance=ExtResource("5_a2j1f")]
+position = Vector2(4447, -11651)
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource("7_yokxk")
+format = 2
+layer_0/tile_data = PackedInt32Array(3539049, 327680, 3, 3539053, 393216, 3, 3539057, 393216, 3, 3539061, 393216, 3, 3539065, 393216, 3, 3539069, 393216, 3, 3539073, 393216, 3, 3539077, 458752, 3, 4194377, 327680, 3, 4194381, 393216, 3, 4194385, 393216, 3, 4194389, 393216, 3, 4194393, 393216, 3, 4194397, 393216, 3, 4194401, 393216, 3, 4194405, 458752, 3)
 
 [connection signal="collected" from="DoubleJump" to="Player" method="_on_double_jump_collected"]
 [connection signal="collected" from="WallJump" to="Player" method="_on_wall_jump_collected"]
