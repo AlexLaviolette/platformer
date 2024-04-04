@@ -1,36 +1,23 @@
-[gd_scene load_steps=19 format=3 uid="uid://ynakmav11in0"]
+[gd_scene load_steps=18 format=3 uid="uid://ynakmav11in0"]
 
 [ext_resource type="PackedScene" uid="uid://ouvpieckk8x" path="res://player.tscn" id="1_jl6in"]
 [ext_resource type="PackedScene" uid="uid://j7sbw3pr7cy7" path="res://moving_platform.tscn" id="2_6xqyy"]
-[ext_resource type="Texture2D" uid="uid://svxmqe7a6fya" path="res://art/tilesheet_complete.png" id="2_nfb48"]
 [ext_resource type="PackedScene" uid="uid://blnnoifkkjd3w" path="res://collectible.tscn" id="3_lmjtp"]
 [ext_resource type="PackedScene" uid="uid://bn18hscy8ldtj" path="res://moving_platform_sm.tscn" id="4_rrrv2"]
 [ext_resource type="PackedScene" uid="uid://pp0m6ydq2nby" path="res://city_section.tscn" id="5_a2j1f"]
 [ext_resource type="TileSet" uid="uid://b5y1xrxu7sj4n" path="res://tile_set.tres" id="7_yokxk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_brtsr"]
-size = Vector2(500, 50)
+[sub_resource type="Curve2D" id="Curve2D_wfbth"]
+_data = {
+"points": PackedVector2Array(-51, 51, 0, 0, 0, 0, -51, 51, 51, -51, 362, -105, 2, 95, -2, -95, 414, -357, 87, 65, -87, -65, 274, -574, 62.9325, -19.799, -62.9325, 19.799, -85, -633, 28.9914, -30.4056, -28.9914, 30.4056, -323, -509, -1.26134, -47.5106, 1.26134, 47.5106, -389, -201, -71.6572, -43.2602, 71.6572, 43.2602, -250, -48, 0, 0, 0, 0, 0, 0)
+}
+point_count = 9
 
 [sub_resource type="QuadMesh" id="QuadMesh_hov1o"]
 size = Vector2(500, 50)
 
-[sub_resource type="QuadMesh" id="QuadMesh_rtv3x"]
-size = Vector2(250, 50)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tyra"]
-size = Vector2(250, 50)
-
-[sub_resource type="QuadMesh" id="QuadMesh_1r7j4"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brtsr"]
 size = Vector2(500, 50)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ny1rt"]
-size = Vector2(50, 50)
-
-[sub_resource type="Curve2D" id="Curve2D_wfbth"]
-_data = {
-"points": PackedVector2Array(0, 0, 0, 0, 0, 0, -51, 51, 51, -51, 362, -105, 2, 95, -2, -95, 414, -357, 87, 65, -87, -65, 274, -574, 62.9325, -19.799, -62.9325, 19.799, -85, -633, 28.9914, -30.4056, -28.9914, 30.4056, -323, -509, -1.26134, -47.5106, 1.26134, 47.5106, -389, -201, -71.6572, -43.2602, 71.6572, 43.2602, -250, -48, 0, 0, 0, 0, 0, 0)
-}
-point_count = 9
 
 [sub_resource type="Curve2D" id="Curve2D_326t3"]
 _data = {
@@ -68,6 +55,18 @@ func _process(delta):
 	path.progress += speed
 "
 
+[sub_resource type="QuadMesh" id="QuadMesh_rtv3x"]
+size = Vector2(250, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tyra"]
+size = Vector2(250, 50)
+
+[sub_resource type="QuadMesh" id="QuadMesh_1r7j4"]
+size = Vector2(500, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ny1rt"]
+size = Vector2(50, 50)
+
 [sub_resource type="Curve2D" id="Curve2D_2p3a2"]
 _data = {
 "points": PackedVector2Array(-49.0815, -0.471937, 49.0815, 0.471937, 0, 0, -38.956, 31.4645, 38.956, -31.4645, 197, -72, 0, 41.9526, 0, -41.9526, 258, -209, 32.5637, 26.4285, -32.5637, -26.4285, 201, -361, 46.7218, -0.471937, -46.7218, 0.471937, 17, -427, 27.8443, -29.732, -27.8443, 29.732, -147, -352, 0, -38.2269, 0, 38.2269, -218, -216, -30.204, -30.6759, 30.204, 30.6759, -146, -55, 0, 0, 0, 0, 0, 0)
@@ -77,214 +76,26 @@ point_count = 9
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_jl6in")]
-position = Vector2(715.999, 950)
+position = Vector2(2020, -99)
 scale = Vector2(2.2, 2.2)
-double_jump = true
-wall_jump = true
 
-[node name="Platform" type="StaticBody2D" parent="."]
-position = Vector2(714, 1168)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
-shape = SubResource("RectangleShape2D_brtsr")
-
-[node name="Sprite2D" type="Sprite2D" parent="Platform"]
-scale = Vector2(2.6, 0.9)
-texture = ExtResource("2_nfb48")
-region_enabled = true
-region_rect = Rect2(320, 192, 192, 56)
-
-[node name="Platform2" type="StaticBody2D" parent="."]
-position = Vector2(1398, 1033)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform2"]
-modulate = Color(0.0901961, 0.211765, 0.227451, 1)
-mesh = SubResource("QuadMesh_hov1o")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
-shape = SubResource("RectangleShape2D_brtsr")
-
-[node name="Platform3" type="StaticBody2D" parent="."]
-position = Vector2(1917, 871)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform3"]
-modulate = Color(0.0901961, 0.211765, 0.227451, 1)
-mesh = SubResource("QuadMesh_hov1o")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
-shape = SubResource("RectangleShape2D_brtsr")
-
-[node name="MediumPlatform1" type="StaticBody2D" parent="."]
-position = Vector2(1671, 688)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="MediumPlatform1"]
-modulate = Color(0.0901961, 0.211765, 0.227451, 1)
-mesh = SubResource("QuadMesh_rtv3x")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MediumPlatform1"]
-shape = SubResource("RectangleShape2D_5tyra")
-
-[node name="Platform5" type="StaticBody2D" parent="."]
-position = Vector2(2330, 547)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform5"]
-modulate = Color(0.0901961, 0.211765, 0.227451, 1)
-mesh = SubResource("QuadMesh_hov1o")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform5"]
-shape = SubResource("RectangleShape2D_brtsr")
-
-[node name="Platform6" type="StaticBody2D" parent="."]
-position = Vector2(3407, 548)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform6"]
-modulate = Color(0.0901961, 0.211765, 0.227451, 1)
-mesh = SubResource("QuadMesh_hov1o")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform6"]
-shape = SubResource("RectangleShape2D_brtsr")
-
-[node name="Platform7" type="StaticBody2D" parent="."]
-position = Vector2(3026, 26)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Platform7"]
-modulate = Color(0.0901961, 0.211765, 0.227451, 1)
-mesh = SubResource("QuadMesh_hov1o")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform7"]
-shape = SubResource("RectangleShape2D_brtsr")
-
-[node name="SmallPlatform" type="StaticBody2D" parent="."]
-position = Vector2(4010, 548)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="SmallPlatform"]
-modulate = Color(0.0901961, 0.211765, 0.227451, 1)
-position = Vector2(-226, 0)
-scale = Vector2(0.096, 1)
-mesh = SubResource("QuadMesh_1r7j4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallPlatform"]
-position = Vector2(-225.5, 0)
-shape = SubResource("RectangleShape2D_ny1rt")
-
-[node name="SmallPlatform2" type="StaticBody2D" parent="."]
-position = Vector2(4629, 320)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="SmallPlatform2"]
-modulate = Color(0.0901961, 0.211765, 0.227451, 1)
-position = Vector2(-226, 0)
-scale = Vector2(0.096, 1)
-mesh = SubResource("QuadMesh_1r7j4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallPlatform2"]
-position = Vector2(-225.5, 0)
-shape = SubResource("RectangleShape2D_ny1rt")
-
-[node name="SmallPlatform4" type="StaticBody2D" parent="."]
-position = Vector2(4388, 364)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="SmallPlatform4"]
-modulate = Color(0.0901961, 0.211765, 0.227451, 1)
-position = Vector2(-226, 0)
-scale = Vector2(0.096, 1)
-mesh = SubResource("QuadMesh_1r7j4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallPlatform4"]
-position = Vector2(-225.5, 0)
-shape = SubResource("RectangleShape2D_ny1rt")
-
-[node name="SmallPlatform5" type="StaticBody2D" parent="."]
-position = Vector2(4422, 166)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="SmallPlatform5"]
-modulate = Color(0.0901961, 0.211765, 0.227451, 1)
-position = Vector2(-226, 0)
-scale = Vector2(0.096, 1)
-mesh = SubResource("QuadMesh_1r7j4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallPlatform5"]
-position = Vector2(-225.5, 0)
-shape = SubResource("RectangleShape2D_ny1rt")
-
-[node name="SmallPlatform6" type="StaticBody2D" parent="."]
-position = Vector2(4226, 118)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="SmallPlatform6"]
-modulate = Color(0.0901961, 0.211765, 0.227451, 1)
-position = Vector2(-226, 0)
-scale = Vector2(0.096, 1)
-mesh = SubResource("QuadMesh_1r7j4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallPlatform6"]
-position = Vector2(-225.5, 0)
-shape = SubResource("RectangleShape2D_ny1rt")
-
-[node name="SmallPlatform7" type="StaticBody2D" parent="."]
-position = Vector2(3787, 25)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="SmallPlatform7"]
-modulate = Color(0.0901961, 0.211765, 0.227451, 1)
-position = Vector2(-226, 0)
-scale = Vector2(0.096, 1)
-mesh = SubResource("QuadMesh_1r7j4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallPlatform7"]
-position = Vector2(-225.5, 0)
-shape = SubResource("RectangleShape2D_ny1rt")
-
-[node name="SmallPlatform3" type="StaticBody2D" parent="."]
-position = Vector2(4213, 498)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="SmallPlatform3"]
-modulate = Color(0.0901961, 0.211765, 0.227451, 1)
-position = Vector2(-226, 0)
-scale = Vector2(0.096, 1)
-mesh = SubResource("QuadMesh_1r7j4")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallPlatform3"]
-position = Vector2(-225.5, 0)
-shape = SubResource("RectangleShape2D_ny1rt")
+[node name="GrassSection" type="TileMap" parent="."]
+tile_set = ExtResource("7_yokxk")
+format = 2
+layer_0/tile_data = PackedInt32Array(3539049, 327680, 3, 3539053, 393216, 3, 3539057, 393216, 3, 3539061, 393216, 3, 3539065, 393216, 3, 3539069, 393216, 3, 3539073, 393216, 3, 3539077, 458752, 3, 4194377, 327680, 3, 4194381, 393216, 3, 4194385, 393216, 3, 4194389, 393216, 3, 4194393, 393216, 3, 4194397, 393216, 3, 4194401, 393216, 3, 4194405, 458752, 3, 4784158, 327680, 3, 4784186, 458752, 3, 4784182, 393216, 3, 4784162, 393216, 3, 4784166, 393216, 3, 4784170, 393216, 3, 4784174, 393216, 3, 4784178, 393216, 3, 2818146, 327680, 3, 2818158, 458752, 3, 2818150, 393216, 3, 2818154, 393216, 3, 2228355, 327680, 3, 2228359, 393216, 3, 2228363, 393216, 3, 2228367, 393216, 3, 2228371, 393216, 3, 2228375, 393216, 3, 2228379, 393216, 3, 2228383, 458752, 3, 2228422, 327680, 3, 2228426, 393216, 3, 2228430, 393216, 3, 2228434, 393216, 3, 2228438, 393216, 3, 2228442, 393216, 3, 2228446, 393216, 3, 2228450, 458752, 3, 131247, 327680, 3, 131251, 393216, 3, 131255, 393216, 3, 131259, 393216, 3, 131263, 393216, 3, 131267, 393216, 3, 131271, 393216, 3, 131275, 458752, 3, 2228460, 262144, 3, 2031865, 262144, 3, 1442052, 262144, 3, 655622, 262144, 3, 1310995, 262144, 3, 459002, 262144, 3, 131294, 262144, 3)
 
 [node name="MovingPlatform1" parent="." instance=ExtResource("2_6xqyy")]
 position = Vector2(2030, 24)
 curve = SubResource("Curve2D_wfbth")
 speed = 8.0
 speed_scale = 5.0
-metadata/_edit_lock_ = true
 
 [node name="MovingPlatform2" parent="." instance=ExtResource("2_6xqyy")]
-position = Vector2(1010, -614)
+position = Vector2(1004, -613)
 rotation = 3.14159
 curve = SubResource("Curve2D_wfbth")
 speed = 8.0
 speed_scale = 5.0
-metadata/_edit_lock_ = true
 
 [node name="MovingPlatform3" parent="." instance=ExtResource("2_6xqyy")]
 position = Vector2(-270, 26)
@@ -994,11 +805,6 @@ shape = SubResource("RectangleShape2D_brtsr")
 
 [node name="CitySection" parent="." instance=ExtResource("5_a2j1f")]
 position = Vector2(4447, -11651)
-
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource("7_yokxk")
-format = 2
-layer_0/tile_data = PackedInt32Array(3539049, 327680, 3, 3539053, 393216, 3, 3539057, 393216, 3, 3539061, 393216, 3, 3539065, 393216, 3, 3539069, 393216, 3, 3539073, 393216, 3, 3539077, 458752, 3, 4194377, 327680, 3, 4194381, 393216, 3, 4194385, 393216, 3, 4194389, 393216, 3, 4194393, 393216, 3, 4194397, 393216, 3, 4194401, 393216, 3, 4194405, 458752, 3)
 
 [connection signal="collected" from="DoubleJump" to="Player" method="_on_double_jump_collected"]
 [connection signal="collected" from="WallJump" to="Player" method="_on_wall_jump_collected"]

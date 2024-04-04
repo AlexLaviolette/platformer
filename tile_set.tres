@@ -1,9 +1,15 @@
-[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://b5y1xrxu7sj4n"]
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://b5y1xrxu7sj4n"]
 
 [ext_resource type="Texture2D" uid="uid://svxmqe7a6fya" path="res://art/tilesheet_complete.png" id="1_fgkvb"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_xe46n"]
 tile_data = PackedInt32Array(0, 327680, 6, 1, 393216, 6, 2, 393216, 6, 3, 458752, 6)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_3bgvg"]
+tile_data = PackedInt32Array(0, 327680, 3, 4, 393216, 3, 8, 393216, 3, 12, 458752, 3)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_2axr7"]
+tile_data = PackedInt32Array(0, 327680, 3, 4, 393216, 3, 8, 393216, 3, 12, 393216, 3, 16, 393216, 3, 20, 393216, 3, 24, 393216, 3, 28, 458752, 3)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_duqjo"]
 resource_name = "terrain"
@@ -977,3 +983,5 @@ custom_data_layer_0/name = "destructible"
 custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_duqjo")
 pattern_0 = SubResource("TileMapPattern_xe46n")
+pattern_1 = SubResource("TileMapPattern_3bgvg")
+pattern_2 = SubResource("TileMapPattern_2axr7")
