@@ -16,18 +16,26 @@ var respawn
 @onready var wall_cast1 = $WallRayCast1.target_position
 @onready var wall_cast2 = $WallRayCast2.target_position
 
+var started := false
+
+signal dead
+
 func _ready():
 	respawn = position # Save initial position as respawn position
 
 func die():
 	position = respawn
+	dead.emit()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
+	if not started:
+		return
+	
 	var is_wall_climing = (Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right")) and ($WallRayCast1.is_colliding() or $WallRayCast2.is_colliding())
 	
-	if position.y > 2000 || Input.is_action_pressed("reset"):
-		die() # Fell off the map
+	if position.y > 2000 || Input.is_action_just_pressed("reset"):
+		die()
 	
 	if !is_on_floor():
 		velocity.y += gravity
@@ -107,3 +115,7 @@ func _on_double_jump_collected():
 
 func _on_wall_jump_collected():
 	wall_jump = true # Replace with function body.
+
+
+func _on_hud_start_game():
+	started = true

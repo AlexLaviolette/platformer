@@ -1,0 +1,118 @@
+[gd_scene load_steps=5 format=3 uid="uid://dg8cmecyj2wnx"]
+
+[ext_resource type="Script" path="res://hud.gd" id="1_mx3qs"]
+[ext_resource type="FontFile" uid="uid://d0hey7py3xohx" path="res://fonts/Xolonium-Regular.ttf" id="1_wsp8y"]
+[ext_resource type="Theme" uid="uid://dytq4r0fbduj6" path="res://hud.tres" id="2_pgec4"]
+[ext_resource type="Script" path="res://Menu.gd" id="4_r0r76"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_mx3qs")
+
+[node name="DeathLabel" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 20.0
+offset_right = 234.0
+offset_bottom = 112.0
+theme = ExtResource("2_pgec4")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_wsp8y")
+theme_override_font_sizes/font_size = 64
+text = "💀0"
+vertical_alignment = 1
+
+[node name="TimerLabel" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -348.0
+offset_top = 20.0
+offset_right = -40.0
+offset_bottom = 98.0
+grow_horizontal = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_wsp8y")
+theme_override_font_sizes/font_size = 64
+text = "00:00:00"
+horizontal_alignment = 2
+
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_r0r76")
+
+[node name="Title" type="Label" parent="Menu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.0
+offset_top = 304.0
+offset_right = 181.0
+offset_bottom = 383.0
+grow_horizontal = 2
+theme = ExtResource("2_pgec4")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("1_wsp8y")
+theme_override_font_sizes/font_size = 65
+text = "Platformer"
+
+[node name="InstructionsLabel" type="Label" parent="Menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -342.5
+offset_top = -80.5
+offset_right = 342.5
+offset_bottom = 80.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_pgec4")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/outline_size = 2
+text = "Arrow keys to move
+Spacebar to jump"
+horizontal_alignment = 1
+
+[node name="StartButton" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -89.5
+offset_top = -356.0
+offset_right = 110.5
+offset_bottom = -256.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_pgec4")
+text = "Start
+"
+
+[connection signal="pressed" from="Menu/StartButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Menu/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Menu/StartButton" to="Menu" method="_on_start_button_pressed"]
