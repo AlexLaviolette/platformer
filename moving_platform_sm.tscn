@@ -1,11 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://bn18hscy8ldtj"]
 
 [ext_resource type="Script" path="res://moving_platform.gd" id="1_ekauf"]
+[ext_resource type="Texture2D" uid="uid://h453logr0gkt" path="res://art/GUI.png" id="2_luaqf"]
 
 [sub_resource type="GDScript" id="GDScript_ouf1d"]
-
-[sub_resource type="QuadMesh" id="QuadMesh_djcfy"]
-size = Vector2(50, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b8wi8"]
 size = Vector2(50, 50)
@@ -66,9 +64,11 @@ position = Vector2(6.67834, 0.0162096)
 rotation = 0.00242718
 script = SubResource("GDScript_ouf1d")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="AnimatableBody2D"]
-modulate = Color(0.0901961, 0.211765, 0.227451, 1)
-mesh = SubResource("QuadMesh_djcfy")
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
+scale = Vector2(1.04068, 3.0798)
+texture = ExtResource("2_luaqf")
+region_enabled = true
+region_rect = Rect2(192, 32, 48, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
 shape = SubResource("RectangleShape2D_b8wi8")
