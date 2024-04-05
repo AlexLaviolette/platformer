@@ -30,9 +30,6 @@ func update_timer():
 		$TimerLabel.text = "%02d:%02d.%s" % [minutes, seconds, ms]
 	else:
 		$TimerLabel.text = "%02d.%s" % [seconds, ms]
-		
-		
-		
 	
 
 func update_deaths():
@@ -46,4 +43,3 @@ func _on_player_dead():
 func _on_start_button_pressed():
 	started = true
 	start_game.emit()
-	print("SIG SENT")
