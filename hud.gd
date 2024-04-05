@@ -33,7 +33,7 @@ func update_timer():
 	
 
 func update_deaths():
-	$DeathLabel.text = "💀%s" % deaths
+	$DeathCounter/DeathLabel.text = str(deaths)
 
 
 func _on_player_dead():

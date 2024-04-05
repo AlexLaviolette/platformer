@@ -1,17 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://dg8cmecyj2wnx"]
+[gd_scene load_steps=6 format=3 uid="uid://dg8cmecyj2wnx"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_mx3qs"]
 [ext_resource type="FontFile" uid="uid://d0hey7py3xohx" path="res://fonts/Xolonium-Regular.ttf" id="1_wsp8y"]
+[ext_resource type="Texture2D" uid="uid://3lpumbyddxj6" path="res://art/skull.webp" id="2_848jg"]
 [ext_resource type="Theme" uid="uid://dytq4r0fbduj6" path="res://hud.tres" id="2_pgec4"]
 [ext_resource type="Script" path="res://Menu.gd" id="4_r0r76"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_mx3qs")
 
-[node name="DeathLabel" type="Label" parent="."]
-offset_left = 40.0
+[node name="DeathCounter" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Skull" type="Sprite2D" parent="DeathCounter"]
+position = Vector2(69, 60)
+scale = Vector2(-0.035, 0.035)
+texture = ExtResource("2_848jg")
+
+[node name="DeathLabel" type="Label" parent="DeathCounter"]
+offset_left = 118.0
 offset_top = 20.0
-offset_right = 234.0
+offset_right = 312.0
 offset_bottom = 112.0
 theme = ExtResource("2_pgec4")
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -21,7 +33,7 @@ theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("1_wsp8y")
 theme_override_font_sizes/font_size = 64
-text = "💀0"
+text = "0"
 vertical_alignment = 1
 
 [node name="TimerLabel" type="Label" parent="."]
