@@ -11,6 +11,9 @@ func _ready():
 func _process(delta):
 	if Input.is_action_just_pressed("enter"):
 		_on_start_button_pressed()
+	
+	if Input.is_action_just_pressed("pause"):
+		show()
 
 func _on_start_button_pressed():
 	hide()
