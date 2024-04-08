@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://blnnoifkkjd3w"]
+[gd_scene load_steps=11 format=3 uid="uid://blnnoifkkjd3w"]
 
 [ext_resource type="Script" path="res://collectible.gd" id="1_4qpt5"]
 [ext_resource type="Texture2D" uid="uid://boyeuyoqvxqhi" path="res://art/Flight_Bonus_04.png" id="1_qrnpx"]
 [ext_resource type="Theme" uid="uid://dytq4r0fbduj6" path="res://hud.tres" id="3_lcmr4"]
+[ext_resource type="AudioStream" uid="uid://i1mold5hsdnh" path="res://sound/glow.mp3" id="4_cxd3c"]
+[ext_resource type="AudioStream" uid="uid://bux4dac51vdpy" path="res://sound/collect.mp3" id="5_yxm2y"]
 
 [sub_resource type="GDScript" id="GDScript_q77bp"]
 script/source = "extends Area2D
@@ -124,5 +126,16 @@ grow_horizontal = 2
 theme = ExtResource("3_lcmr4")
 theme_override_font_sizes/font_size = 100
 text = "Collectible"
+
+[node name="GlowSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_cxd3c")
+volume_db = -10.0
+autoplay = true
+max_distance = 800.0
+attenuation = 2.14355
+
+[node name="CollectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_yxm2y")
+volume_db = -10.0
 
 [connection signal="body_entered" from="PickupArea" to="." method="_on_pickup_area_body_entered"]

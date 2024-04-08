@@ -18,4 +18,7 @@ func _on_pickup_area_body_entered(body):
 		collected.emit()
 		# Must be deferred as we can't change physics properties on a physics callback.
 		$PickupArea/CollisionShape2D.set_deferred("disabled", true)
+		$GlowSound.stop()
+		$CollectSound.play()
+		
 		print("Collected " + name)
