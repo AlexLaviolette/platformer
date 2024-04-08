@@ -26,6 +26,18 @@ func _ready():
 func die():
 	position = respawn
 	dead.emit()
+	
+func play_jump_sound():
+	$JumpAudio.pitch_scale = randf_range(0.95, 1.05)
+	$JumpAudio.play()
+	
+func play_walk_sound():
+	$FootStepAudio.pitch_scale = randf_range(0.8, 1.2)
+	$FootStepAudio.play()
+	
+func play_cling_sound():
+	$ClingAudio.pitch_scale = randf_range(0.8, 1.2)
+	$ClingAudio.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -57,15 +69,18 @@ func _physics_process(delta):
 		velocity.y = -jump_force
 		$AnimatedSprite2D.animation = "up"
 		$AnimatedSprite2D.frame = 0
+		play_jump_sound()
 	elif Input.is_action_just_pressed("jump") and wall_jump and is_wall_climing:
 		velocity.y = -jump_force
 		$AnimatedSprite2D.animation = "up"
 		$AnimatedSprite2D.frame = 0
+		play_cling_sound()
 	elif Input.is_action_just_pressed("jump") and double_jump and extra_jumps > 0:
 		velocity.y = -jump_force
 		$AnimatedSprite2D.animation = "up"
 		$AnimatedSprite2D.frame = 0
 		extra_jumps -= 1
+		play_jump_sound()
 	elif Input.is_action_pressed("jump"):
 		if velocity.y < 0:
 			velocity.y -= jump_hover
@@ -76,19 +91,30 @@ func _physics_process(delta):
 	$AnimatedSprite2D.play()
 
 	if is_wall_climing:
+		if $AnimatedSprite2D.animation != "wall":
+			play_cling_sound() # Only trigger on wall impact
+			
 		$AnimatedSprite2D.animation = "wall"
 		 # visually hug the wall
 		if velocity.x > 0:
 			$AnimatedSprite2D.offset = Vector2(5, 0)
 		else:
 			$AnimatedSprite2D.offset = Vector2(-5, 0)
+			
+		
 	else:
 		$AnimatedSprite2D.offset = Vector2(0, 0)
 		if velocity.y != 0:
 			check_for_floating()
 		elif velocity.x != 0:
 			$AnimatedSprite2D.animation = "walk"
+			if $FootStepAudioTimer.time_left <= 0:
+				play_walk_sound()
+				$FootStepAudioTimer.start(0.15)
 		else:
+			if $AnimatedSprite2D.animation != "idle":
+				play_walk_sound() # Only trigger on first idling
+				
 			$AnimatedSprite2D.animation = "idle"
 	
 	# Don't change direction if velocity is 0, otherwise flip animation and wall climb raycasts

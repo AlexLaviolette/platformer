@@ -21,6 +21,7 @@ scale = Vector2(-0.035, 0.035)
 texture = ExtResource("2_848jg")
 
 [node name="DeathLabel" type="Label" parent="DeathCounter"]
+layout_mode = 0
 offset_left = 118.0
 offset_top = 20.0
 offset_right = 312.0
