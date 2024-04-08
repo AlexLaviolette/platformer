@@ -1062,10 +1062,8 @@ point_count = 9
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_jl6in")]
-position = Vector2(4194, -15593)
+position = Vector2(691, 1075)
 scale = Vector2(2.2, 2.2)
-double_jump = true
-wall_jump = true
 
 [node name="GrassSection" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_nc7fx")

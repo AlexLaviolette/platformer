@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bwk1a23x5sxkx" path="res://art/Hurt.png" id="5_vpqsa"]
 [ext_resource type="PackedScene" uid="uid://dg8cmecyj2wnx" path="res://hud.tscn" id="6_jv6rf"]
 [ext_resource type="Texture2D" uid="uid://b2tjvw3el6yiv" path="res://art/Sky.png" id="6_q4hhd"]
-[ext_resource type="AudioStream" uid="uid://f6wioui600h6" path="res://footsteps-grass.mp3" id="8_oj6ew"]
+[ext_resource type="AudioStream" uid="uid://f6wioui600h6" path="res://sound/footsteps-grass.mp3" id="8_s0375"]
 [ext_resource type="AudioStream" uid="uid://clwxdcw6c4p6n" path="res://sound/jump.mp3" id="9_3um25"]
 [ext_resource type="AudioStream" uid="uid://cbes3xuw3dcui" path="res://sound/cling.mp3" id="10_24la4"]
 
@@ -278,7 +278,7 @@ texture = ExtResource("6_q4hhd")
 centered = false
 
 [node name="FootStepAudio" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_oj6ew")
+stream = ExtResource("8_s0375")
 volume_db = -25.0
 
 [node name="FootStepAudioTimer" type="Timer" parent="."]
@@ -286,7 +286,7 @@ one_shot = true
 
 [node name="JumpAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_3um25")
-volume_db = -20.0
+volume_db = -8.0
 
 [node name="ClingAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_24la4")

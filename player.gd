@@ -28,7 +28,7 @@ func die():
 	dead.emit()
 	
 func play_jump_sound():
-	$JumpAudio.pitch_scale = randf_range(0.95, 1.05)
+	$JumpAudio.pitch_scale = randf_range(0.90, 1.05)
 	$JumpAudio.play()
 	
 func play_walk_sound():
