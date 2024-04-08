@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://blnnoifkkjd3w"]
+[gd_scene load_steps=9 format=3 uid="uid://blnnoifkkjd3w"]
 
 [ext_resource type="Script" path="res://collectible.gd" id="1_4qpt5"]
 [ext_resource type="Texture2D" uid="uid://boyeuyoqvxqhi" path="res://art/Flight_Bonus_04.png" id="1_qrnpx"]
+[ext_resource type="Theme" uid="uid://dytq4r0fbduj6" path="res://hud.tres" id="3_lcmr4"]
 
 [sub_resource type="GDScript" id="GDScript_q77bp"]
 script/source = "extends Area2D
@@ -110,5 +111,18 @@ libraries = {
 }
 autoplay = "float"
 speed_scale = 0.5
+
+[node name="CollectibleName" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -269.5
+offset_top = -395.0
+offset_right = 269.5
+offset_bottom = -275.0
+grow_horizontal = 2
+theme = ExtResource("3_lcmr4")
+theme_override_font_sizes/font_size = 100
+text = "Collectible"
 
 [connection signal="body_entered" from="PickupArea" to="." method="_on_pickup_area_body_entered"]
