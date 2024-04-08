@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://ouvpieckk8x"]
+[gd_scene load_steps=41 format=3 uid="uid://ouvpieckk8x"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_3vani"]
 [ext_resource type="Texture2D" uid="uid://bwy71ytwfv2ry" path="res://art/Jump.png" id="2_o5fkj"]
@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://f6wioui600h6" path="res://sound/footsteps-grass.mp3" id="8_s0375"]
 [ext_resource type="AudioStream" uid="uid://clwxdcw6c4p6n" path="res://sound/jump.mp3" id="9_3um25"]
 [ext_resource type="AudioStream" uid="uid://cbes3xuw3dcui" path="res://sound/cling.mp3" id="10_24la4"]
+[ext_resource type="AudioStream" uid="uid://dno0so046h8r2" path="res://sound/dead.mp3" id="11_3ti8e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lphde"]
 atlas = ExtResource("2_o5fkj")
@@ -291,6 +292,10 @@ volume_db = -8.0
 [node name="ClingAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_24la4")
 volume_db = -20.0
+
+[node name="DeadAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("11_3ti8e")
+volume_db = -12.0
 
 [connection signal="dead" from="." to="Camera2D/HUD" method="_on_player_dead"]
 [connection signal="start_game" from="Camera2D/HUD" to="." method="_on_hud_start_game"]

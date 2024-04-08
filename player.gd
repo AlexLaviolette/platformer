@@ -26,6 +26,7 @@ func _ready():
 func die():
 	position = respawn
 	dead.emit()
+	$DeadAudio.play()
 	
 func play_jump_sound():
 	$JumpAudio.pitch_scale = randf_range(0.90, 1.05)

@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dg8cmecyj2wnx"]
+[gd_scene load_steps=7 format=3 uid="uid://dg8cmecyj2wnx"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_mx3qs"]
 [ext_resource type="FontFile" uid="uid://d0hey7py3xohx" path="res://fonts/Xolonium-Regular.ttf" id="1_wsp8y"]
 [ext_resource type="Texture2D" uid="uid://3lpumbyddxj6" path="res://art/skull.webp" id="2_848jg"]
 [ext_resource type="Theme" uid="uid://dytq4r0fbduj6" path="res://hud.tres" id="2_pgec4"]
 [ext_resource type="Script" path="res://Menu.gd" id="4_r0r76"]
+[ext_resource type="AudioStream" uid="uid://bdueffswc0yv5" path="res://sound/background.mp3" id="6_4sbwr"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_mx3qs")
@@ -82,8 +83,9 @@ theme_override_constants/shadow_offset_x = 3
 theme_override_constants/shadow_offset_y = 3
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("1_wsp8y")
-theme_override_font_sizes/font_size = 65
-text = "Platformer"
+theme_override_font_sizes/font_size = 90
+text = "Oranos"
+horizontal_alignment = 1
 
 [node name="InstructionsLabel" type="Label" parent="Menu"]
 layout_mode = 1
@@ -93,9 +95,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -342.5
-offset_top = -80.5
+offset_top = -168.0
 offset_right = 342.5
-offset_bottom = 80.5
+offset_bottom = -7.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_pgec4")
@@ -125,6 +127,10 @@ mouse_default_cursor_shape = 2
 theme = ExtResource("2_pgec4")
 text = "Start
 "
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="Menu"]
+stream = ExtResource("6_4sbwr")
+volume_db = -10.0
 
 [connection signal="start_game" from="Menu" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Menu/StartButton" to="Menu" method="_on_start_button_pressed"]
