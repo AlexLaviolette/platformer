@@ -1062,7 +1062,7 @@ point_count = 9
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_jl6in")]
-position = Vector2(1621, -1805)
+position = Vector2(704, 1075)
 scale = Vector2(2.2, 2.2)
 
 [node name="GrassSection" type="TileMap" parent="."]

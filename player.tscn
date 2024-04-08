@@ -254,6 +254,8 @@ shape = SubResource("RectangleShape2D_rmu26")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -84)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 
 [node name="HUD" parent="Camera2D" instance=ExtResource("6_jv6rf")]
 
