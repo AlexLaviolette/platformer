@@ -250,6 +250,7 @@ polygon = PackedVector2Array(-12, 21, -11, 18, -11, 13, -8, 5, -9, -2, -4, -7, -
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -84)
+process_callback = 0
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
