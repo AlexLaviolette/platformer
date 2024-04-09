@@ -121,10 +121,12 @@ func _physics_process(delta):
 	# Don't change direction if velocity is 0, otherwise flip animation and wall climb raycasts
 	if velocity.x > 0:
 		$AnimatedSprite2D.flip_h = false
+		$CollisionPolygon2D.scale.x = 1
 		$WallRayCast1.target_position = wall_cast1
 		$WallRayCast2.target_position = wall_cast2
 	elif velocity.x < 0:
 		$AnimatedSprite2D.flip_h = true
+		$CollisionPolygon2D.scale.x = -1
 		$WallRayCast1.target_position = wall_cast1 * -1
 		$WallRayCast2.target_position = wall_cast2 * -1
 	
