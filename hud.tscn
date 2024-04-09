@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dg8cmecyj2wnx"]
+[gd_scene load_steps=8 format=3 uid="uid://dg8cmecyj2wnx"]
 
 [ext_resource type="Script" path="res://hud.gd" id="1_mx3qs"]
 [ext_resource type="FontFile" uid="uid://d0hey7py3xohx" path="res://fonts/Xolonium-Regular.ttf" id="1_wsp8y"]
@@ -6,6 +6,7 @@
 [ext_resource type="Theme" uid="uid://dytq4r0fbduj6" path="res://hud.tres" id="2_pgec4"]
 [ext_resource type="Script" path="res://Menu.gd" id="4_r0r76"]
 [ext_resource type="AudioStream" uid="uid://bdueffswc0yv5" path="res://sound/background.mp3" id="6_4sbwr"]
+[ext_resource type="AudioStream" uid="uid://b26vaap72hbfl" path="res://sound/wind.mp3" id="7_8mxkx"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_mx3qs")
@@ -131,6 +132,13 @@ text = "Start
 [node name="MenuMusic" type="AudioStreamPlayer" parent="Menu"]
 stream = ExtResource("6_4sbwr")
 volume_db = -10.0
+
+[node name="WindBackground" type="AudioStreamPlayer" parent="Menu"]
+stream = ExtResource("7_8mxkx")
+volume_db = -40.0
+
+[node name="RandomizeWind" type="Timer" parent="Menu"]
+one_shot = true
 
 [connection signal="start_game" from="Menu" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Menu/StartButton" to="Menu" method="_on_start_button_pressed"]
