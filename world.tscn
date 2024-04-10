@@ -1063,8 +1063,11 @@ point_count = 9
 
 [node name="Player" parent="." instance=ExtResource("1_jl6in")]
 z_index = 1
-position = Vector2(698, 1051)
+position = Vector2(5193, -14956)
 scale = Vector2(2.2, 2.2)
+double_jump = true
+wall_jump = true
+dash = true
 
 [node name="GrassSection" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_nc7fx")

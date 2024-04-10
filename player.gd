@@ -6,17 +6,22 @@ extends CharacterBody2D
 @export var acceleration = 60 # how quickly player accelerates with horizontal movement
 @export var jump_hover = 12 # Impact of holding space while jumping
 @export var wall_friction = 20 # When you have wall jump you "cling" to walls
+@export var dash_distance = 350
 
 @export var double_jump = false
 @export var wall_jump = false
+@export var dash = false
 
 var extra_jumps = 0
+var dashes = 0
 
 var respawn
 @onready var wall_cast1 = $WallRayCast1.target_position
 @onready var wall_cast2 = $WallRayCast2.target_position
 
 var started := false
+var dashing := false
+var dash_to := 0.0
 
 signal dead
 
@@ -45,10 +50,43 @@ func _physics_process(delta):
 	if not started:
 		return
 	
-	var is_wall_climing = (Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right")) and ($WallRayCast1.is_colliding() or $WallRayCast2.is_colliding())
+	var is_wall_climbing = (Input.is_action_pressed("move_left") or Input.is_action_pressed("move_right")) and ($WallRayCast1.is_colliding() or $WallRayCast2.is_colliding())
 	
 	if position.y > 2000 || Input.is_action_just_pressed("reset"):
 		die()
+		
+	var horizontal_direction = Input.get_axis("move_left", "move_right")
+		
+	if dash and !dashing and Input.is_action_just_pressed("dash") and dashes > 0:
+		dashing = true
+		dashes -= 1
+		velocity.y = 0
+		velocity.x = 0
+		
+		if horizontal_direction != 0:
+			dash_to = position.x + dash_distance * horizontal_direction
+			if horizontal_direction < 0:
+				$AnimatedSprite2D.flip_h = true
+			else:
+				$AnimatedSprite2D.flip_h = false
+		elif $AnimatedSprite2D.flip_h == false:
+			dash_to = position.x + dash_distance
+		else:
+			dash_to = position.x - dash_distance
+		
+		$AnimatedSprite2D.animation = "dash"
+		
+	if dashing:
+		if ($WallRayCast1.is_colliding() or $WallRayCast2.is_colliding()):
+			dashing = false
+			is_wall_climbing = true
+		else:
+			position.x = move_toward(position.x, dash_to, delta * 1000)
+			if round(position.x) == round(dash_to):
+				dashing = false
+			
+			return
+		
 	
 	if !is_on_floor():
 		velocity.y += gravity
@@ -58,9 +96,10 @@ func _physics_process(delta):
 	
 	if is_on_floor():
 		extra_jumps = 1
+		dashes = 1
 	
 	
-	if is_wall_climing and wall_jump:
+	if is_wall_climbing and wall_jump:
 		if velocity.y < 0:
 			velocity.y += wall_friction
 		else:
@@ -71,7 +110,7 @@ func _physics_process(delta):
 		$AnimatedSprite2D.animation = "up"
 		$AnimatedSprite2D.frame = 0
 		play_jump_sound()
-	elif Input.is_action_just_pressed("jump") and wall_jump and is_wall_climing:
+	elif Input.is_action_just_pressed("jump") and wall_jump and is_wall_climbing:
 		velocity.y = -jump_force
 		$AnimatedSprite2D.animation = "up"
 		$AnimatedSprite2D.frame = 0
@@ -85,13 +124,13 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("jump"):
 		if velocity.y < 0:
 			velocity.y -= jump_hover
-	
-	var horizontal_direction = Input.get_axis("move_left", "move_right")
+			
 	velocity.x = move_toward(velocity.x, max_speed * horizontal_direction, acceleration)
 	
 	$AnimatedSprite2D.play()
 
-	if is_wall_climing:
+	if is_wall_climbing:
+		dashes = 1
 		if $AnimatedSprite2D.animation != "wall":
 			play_cling_sound() # Only trigger on wall impact
 			
@@ -131,6 +170,7 @@ func _physics_process(delta):
 		$WallRayCast2.target_position = wall_cast2 * -1
 	
 	move_and_slide()
+
 
 func check_for_floating():
 	if $AnimatedSprite2D.animation != "up":
