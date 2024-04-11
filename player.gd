@@ -7,6 +7,7 @@ extends CharacterBody2D
 @export var jump_hover = 12 # Impact of holding space while jumping
 @export var wall_friction = 20 # When you have wall jump you "cling" to walls
 @export var dash_distance = 350
+@export var spike_force = 900
 
 @export var double_jump = false
 @export var wall_jump = false
@@ -81,11 +82,14 @@ func _physics_process(delta):
 			dashing = false
 			is_wall_climbing = true
 		else:
-			position.x = move_toward(position.x, dash_to, delta * 1000)
-			if round(position.x) == round(dash_to):
-				dashing = false
-			
-			return
+			if Input.is_action_just_pressed("jump") and double_jump and extra_jumps > 0:
+				dashing = false # Jumping cancels dash
+			else:
+				position.x = move_toward(position.x, dash_to, delta * 1000)
+				if round(position.x) == round(dash_to):
+					dashing = false
+				
+				return
 		
 	
 	if !is_on_floor():
@@ -188,3 +192,18 @@ func _on_wall_jump_collected():
 
 func _on_hud_start_game():
 	started = true
+
+
+func _on_dash_collected():
+	dash = true
+
+
+func _on_spike_spiked(sender):
+	# perpendicular to spikes
+	var direction = Vector2.UP.rotated(sender.rotation)
+	velocity.x = direction.x * spike_force
+	velocity.y = direction.y * spike_force
+	
+	dashing = false
+	
+	print(direction)

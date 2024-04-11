@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dqe8j6l8p4h4f"]
+
+[ext_resource type="Script" path="res://spike.gd" id="1_hcoa7"]
+[ext_resource type="Texture2D" uid="uid://svxmqe7a6fya" path="res://art/tilesheet_complete.png" id="1_ikwfw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cwt7q"]
+size = Vector2(62, 23)
+
+[node name="Spike" type="Area2D" groups=["spikes"]]
+script = ExtResource("1_hcoa7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_cwt7q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ikwfw")
+region_enabled = true
+region_rect = Rect2(768, 616, 64, 24)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
