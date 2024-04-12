@@ -8,10 +8,13 @@ extends CharacterBody2D
 @export var wall_friction = 20 # When you have wall jump you "cling" to walls
 @export var dash_distance = 350
 @export var spike_force = 900
+@export var hyper_jump_boost = 22
 
+# Powerups
 @export var double_jump = false
 @export var wall_jump = false
 @export var dash = false
+@export var hyper_jump = false
 
 var extra_jumps = 0
 var dashes = 0
@@ -127,7 +130,10 @@ func _physics_process(delta):
 		play_jump_sound()
 	elif Input.is_action_pressed("jump"):
 		if velocity.y < 0:
-			velocity.y -= jump_hover
+			if hyper_jump:
+				velocity.y -= hyper_jump_boost
+			else:
+				velocity.y -= jump_hover
 			
 	velocity.x = move_toward(velocity.x, max_speed * horizontal_direction, acceleration)
 	
@@ -205,3 +211,7 @@ func _on_spike_spiked(sender):
 	velocity.y = direction.y * spike_force
 	
 	dashing = false
+
+
+func _on_hyper_jump_collected():
+	hyper_jump = true

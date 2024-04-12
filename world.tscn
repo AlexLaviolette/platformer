@@ -1065,13 +1065,14 @@ point_count = 9
 
 [node name="Player" parent="." instance=ExtResource("1_jl6in")]
 z_index = 1
-position = Vector2(6628, -23246)
+position = Vector2(6927, -24010)
 scale = Vector2(2.2, 2.2)
 floor_stop_on_slope = false
 floor_max_angle = 0.802851
 double_jump = true
 wall_jump = true
 dash = true
+hyper_jump = true
 
 [node name="GrassSection" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_nc7fx")
@@ -1223,7 +1224,7 @@ scale = Vector2(0.3, 0.3)
 tile_set = ExtResource("7_n67yc")
 format = 2
 layer_0/name = "Environment"
-layer_0/tile_data = PackedInt32Array(-75890371, 131072, 0, -75890367, 131072, 0, -75890375, 262144, 2, -76152519, 262144, 1, -76414667, 262144, 1, -76152523, 262144, 2, -76414671, 262144, 2, -76676815, 262144, 1, -76676819, 393216, 1, -76938963, 0, 0, -77201107, 0, 0, -75628223, 0, 0, -75366079, 0, 0, -75103935, 0, 2, -74841791, 0, 0, -74579647, 0, 1, -74317503, 0, 0, -74579631, 0, 0, -74579627, 0, 1, -74841775, 65536, 0, -74841771, 196608, 0, -75497153, 0, 0, -75628226, 0, 0, -75693765, 0, 0, -76152527, 0, 2, -76414675, 0, 0, -77004501, 0, 0, -77135574, 0, 0, -77201111, 0, 0, -77463255, 65536, 0, -77463251, 196608, 0, -77266643, 0, 1, -77070037, 0, 2, -76283602, 0, 0, -75955915, 0, 0, -76807894, 0, 0, -76938966, 0, 0, -75366075, 0, 0, -75497147, 0, 0, -75562684, 0, 0, -75890363, 65536, 2, -76152507, 65536, 1, -76414647, 65536, 1, -76676787, 65536, 1, -76152503, 65536, 2, -76414643, 65536, 2, -75955912, 131072, 2, -76086982, 131072, 1, -76545741, 131072, 1, -76414639, 0, 0, -76414635, 0, 0, -76676775, 131072, 0, -76676771, 131072, 0, -76676767, 131072, 0, -76676763, 131072, 0, -76676759, 131072, 0, -75824803, 327680, 0, -75824799, 393216, 0, -75824795, 458752, 0, -76480170, 0, 0, -76676779, 131072, 0, -76676783, 131072, 0, -75693755, 0, 0, -75628218, 0, 0, -75759289, 0, 0, -75890360, 0, 0, -75955894, 0, 0, -76021428, 0, 0, -76152500, 0, 0, -76152498, 0, 0, -76283569, 0, 0, -76283567, 0, 0, -76349101, 0, 0, -76349104, 0, 1, -76414638, 0, 1, -76480151, 131072, 0, -76676755, 131072, 0, -76480147, 131072, 0, -76676751, 131072, 0, -76480143, 131072, 0, -76480139, 524288, 1, -76676747, 524288, 1, -76480155, 458752, 1, -78249683, 327680, 1, -78249687, 131072, 0, -78249691, 131072, 0, -78249695, 131072, 0, -78249699, 131072, 0, -78249703, 458752, 1, -78511827, 0, 2, -78773971, 0, 0, -79036115, 0, 0, -79298259, 0, 0, -79560399, 524288, 2, -79560403, 65536, 0, -81067757, 0, 0, -81329901, 327680, 1, -81592045, 0, 0, -81067761, 0, 0, -81329905, 131072, 0, -81329909, 131072, 0, -81329913, 65536, 0, -81854189, 0, 2, -82116333, 0, 0, -82378477, 0, 0, -82640621, 0, 0, -82902769, 458752, 2, -82902761, 524288, 2, -82902765, 131072, 0, -84147990, 0, 0, -84803366, 0, 0, -85655311, 0, 0, -86179575, 0, 0, -86179571, 0, 0, -86179567, 0, 0, -86179563, 0, 0, -86179559, 0, 0, -86179555, 0, 0, -86179551, 0, 0, -86179547, 0, 0, -86179543, 0, 0, -86179539, 0, 0, -86179535, 0, 0, -86179531, 0, 0, -86179527, 0, 0, -86179523, 0, 0, -86179519, 0, 0, -86179515, 0, 0, -87490276, 393216, 1, -87490272, 131072, 0, -87490268, 131072, 0, -87490264, 131072, 0, -87490260, 131072, 0, -87490256, 131072, 0, -87490252, 131072, 0, -87490248, 131072, 0, -86179511, 0, 0, -86441655, 0, 0, -86703799, 0, 0, -86703795, 0, 1, -86965939, 0, 0, -87228083, 0, 0, -87490227, 0, 0, -87752371, 0, 0, -88014515, 0, 0, -87752392, 0, 0, -88014536, 0, 0, -88276680, 0, 0, -88538824, 0, 0, -87752420, 0, 0, -88014564, 196608, 0, -88014568, 131072, 0, -88014572, 131072, 0, -88014576, 65536, 0, -88276659, 0, 0, -88538803, 0, 0, -87490244, 196608, 0, -88800947, 0, 0, -88800968, 0, 0, -89063112, 0, 0, -89325256, 0, 0, -89587400, 0, 0, -89849544, 65536, 0, -89849540, 131072, 0, -88932040, 0, 2, -86179540, 0, 2, -86179562, 0, 2, -89849536, 327680, 1, -90111680, 65536, 0, -90111676, 131072, 0, -90111672, 131072, 0, -90111668, 131072, 0, -90111664, 131072, 0, -90111660, 196608, 0, -89849516, 0, 0, -89587372, 393216, 1, -89587368, 131072, 0, -89587364, 196608, 0, -88800926, 0, 0, -89128692, 0, 0, -90046196, 327680, 1, -90308340, 0, 1, -90570484, 0, 0, -90832628, 0, 0, -91094772, 0, 0, -91356916, 0, 2, -91619060, 0, 0, -91881204, 0, 0, -92143348, 0, 0, -89128717, 0, 0, -89128744, 0, 0, -90046200, 131072, 0, -90046204, 131072, 0, -90046208, 131072, 0, -90046212, 131072, 0, -90046216, 131072, 0, -90046220, 131072, 0, -90046224, 131072, 0, -90046228, 131072, 0, -90046232, 131072, 0, -90046236, 131072, 0, -90046240, 131072, 0, -90046244, 131072, 0, -90046248, 131072, 0, -90046252, 131072, 0, -90046256, 65536, 0, -92405492, 262144, 0, -92667637, 1048576, 10, -81592056, 589824, 0, -79822545, 720896, 1, -83164905, 655360, 0, -79822544, 655360, 0, -77725396, 720896, 0, -76152516, 655360, 1, -76152515, 720896, 1, -76938894, 655360, 1, -75103915, 655360, 0, -92667538, 327680, 0, -92667534, 393216, 0, -92667530, 458752, 0, -88276713, 589824, 1, -90373823, 720896, 1, -89849508, 589824, 0, -87752394, 589824, 0, -88276712, 655360, 0, -90308395, 655360, 0, -92929674, 589824, 1, -94174843, 262144, 268435457, -94502536, 262144, 1, -94764646, 65536, 0, -94764642, 131072, 0, -94764638, 196608, 0, -95026785, 720896, 1)
+layer_0/tile_data = PackedInt32Array(-75890371, 131072, 0, -75890367, 131072, 0, -75890375, 262144, 2, -76152519, 262144, 1, -76414667, 262144, 1, -76152523, 262144, 2, -76414671, 262144, 2, -76676815, 262144, 1, -76676819, 393216, 1, -76938963, 0, 0, -77201107, 0, 0, -75628223, 0, 0, -75366079, 0, 0, -75103935, 0, 2, -74841791, 0, 0, -74579647, 0, 1, -74317503, 0, 0, -74579631, 0, 0, -74579627, 0, 1, -74841775, 65536, 0, -74841771, 196608, 0, -75497153, 0, 0, -75628226, 0, 0, -75693765, 0, 0, -76152527, 0, 2, -76414675, 0, 0, -77004501, 0, 0, -77135574, 0, 0, -77201111, 0, 0, -77463255, 65536, 0, -77463251, 196608, 0, -77266643, 0, 1, -77070037, 0, 2, -76283602, 0, 0, -75955915, 0, 0, -76807894, 0, 0, -76938966, 0, 0, -75366075, 0, 0, -75497147, 0, 0, -75562684, 0, 0, -75890363, 65536, 2, -76152507, 65536, 1, -76414647, 65536, 1, -76676787, 65536, 1, -76152503, 65536, 2, -76414643, 65536, 2, -75955912, 131072, 2, -76086982, 131072, 1, -76545741, 131072, 1, -76414639, 0, 0, -76414635, 0, 0, -76676775, 131072, 0, -76676771, 131072, 0, -76676767, 131072, 0, -76676763, 131072, 0, -76676759, 131072, 0, -75824803, 327680, 0, -75824799, 393216, 0, -75824795, 458752, 0, -76480170, 0, 0, -76676779, 131072, 0, -76676783, 131072, 0, -75693755, 0, 0, -75628218, 0, 0, -75759289, 0, 0, -75890360, 0, 0, -75955894, 0, 0, -76021428, 0, 0, -76152500, 0, 0, -76152498, 0, 0, -76283569, 0, 0, -76283567, 0, 0, -76349101, 0, 0, -76349104, 0, 1, -76414638, 0, 1, -76480151, 131072, 0, -76676755, 131072, 0, -76480147, 131072, 0, -76676751, 131072, 0, -76480143, 131072, 0, -76480139, 524288, 1, -76676747, 524288, 1, -76480155, 458752, 1, -78249683, 327680, 1, -78249687, 131072, 0, -78249691, 131072, 0, -78249695, 131072, 0, -78249699, 131072, 0, -78249703, 458752, 1, -78511827, 0, 2, -78773971, 0, 0, -79036115, 0, 0, -79298259, 0, 0, -79560399, 524288, 2, -79560403, 65536, 0, -81067757, 0, 0, -81329901, 327680, 1, -81592045, 0, 0, -81067761, 0, 0, -81329905, 131072, 0, -81329909, 131072, 0, -81329913, 65536, 0, -81854189, 0, 2, -82116333, 0, 0, -82378477, 0, 0, -82640621, 0, 0, -82902769, 458752, 2, -82902761, 524288, 2, -82902765, 131072, 0, -84147990, 0, 0, -84803366, 0, 0, -85655311, 0, 0, -86179575, 0, 0, -86179571, 0, 0, -86179567, 0, 0, -86179563, 0, 0, -86179559, 0, 0, -86179555, 0, 0, -86179551, 0, 0, -86179547, 0, 0, -86179543, 0, 0, -86179539, 0, 0, -86179535, 0, 0, -86179531, 0, 0, -86179527, 0, 0, -86179523, 0, 0, -86179519, 0, 0, -86179515, 0, 0, -87490276, 393216, 1, -87490272, 131072, 0, -87490268, 131072, 0, -87490264, 131072, 0, -87490260, 131072, 0, -87490256, 131072, 0, -87490252, 131072, 0, -87490248, 131072, 0, -86179511, 0, 0, -86441655, 0, 0, -86703799, 0, 0, -86703795, 0, 1, -86965939, 0, 0, -87228083, 0, 0, -87490227, 0, 0, -87752371, 0, 0, -88014515, 0, 0, -87752392, 0, 0, -88014536, 0, 0, -88276680, 0, 0, -88538824, 0, 0, -87752420, 0, 0, -88014564, 196608, 0, -88014568, 131072, 0, -88014572, 131072, 0, -88014576, 65536, 0, -88276659, 0, 0, -88538803, 0, 0, -87490244, 196608, 0, -88800947, 0, 0, -88800968, 0, 0, -89063112, 0, 0, -89325256, 0, 0, -89587400, 0, 0, -89849544, 65536, 0, -89849540, 131072, 0, -88932040, 0, 2, -86179540, 0, 2, -86179562, 0, 2, -89849536, 327680, 1, -90111680, 65536, 0, -90111676, 131072, 0, -90111672, 131072, 0, -90111668, 131072, 0, -90111664, 131072, 0, -90111660, 196608, 0, -89849516, 0, 0, -89587372, 393216, 1, -89587368, 131072, 0, -89587364, 196608, 0, -88800926, 0, 0, -89128692, 0, 0, -90046196, 327680, 1, -90308340, 0, 1, -90570484, 0, 0, -90832628, 0, 0, -91094772, 0, 0, -91356916, 0, 2, -91619060, 0, 0, -91881204, 0, 0, -92143348, 0, 0, -89128717, 0, 0, -89128744, 0, 0, -90046200, 131072, 0, -90046204, 131072, 0, -90046208, 131072, 0, -90046212, 131072, 0, -90046216, 131072, 0, -90046220, 131072, 0, -90046224, 131072, 0, -90046228, 131072, 0, -90046232, 131072, 0, -90046236, 131072, 0, -90046240, 131072, 0, -90046244, 131072, 0, -90046248, 131072, 0, -90046252, 131072, 0, -90046256, 65536, 0, -92405492, 262144, 0, -92667637, 1048576, 10, -81592056, 589824, 0, -79822545, 720896, 1, -83164905, 655360, 0, -79822544, 655360, 0, -77725396, 720896, 0, -76152516, 655360, 1, -76152515, 720896, 1, -76938894, 655360, 1, -75103915, 655360, 0, -92667538, 327680, 0, -92667534, 393216, 0, -92667530, 458752, 0, -88276713, 589824, 1, -90373823, 720896, 1, -89849508, 589824, 0, -87752394, 589824, 0, -88276712, 655360, 0, -90308395, 655360, 0, -92929674, 589824, 1, -94174843, 262144, 268435457, -94502536, 262144, 1, -94764646, 65536, 0, -94764642, 131072, 0, -94764638, 196608, 0, -95026785, 720896, 1, -95551058, 0, 3, -95551054, 0, 3, -95813202, 0, 3, -95813198, 0, 4, -96075346, 0, 3, -96075342, 0, 3, -96337486, 0, 5, -96337490, 0, 3, -96599630, 0, 3, -96599634, 0, 4, -94830142, 65536, 0, -94830138, 131072, 0, -94830134, 131072, 0, -94830130, 196608, 0, -95878734, 0, 4, -96861778, 0, 3, -97123922, 0, 3, -97386066, 0, 3, -97648210, 0, 3, -97648206, 0, 3, -94764622, 196608, 1, -96861774, 0, 3, -97123918, 0, 3, -97386062, 0, 3, -97910354, 65536, 3, -97910350, 196608, 3)
 layer_1/name = "Spikes"
 layer_1/tile_data = PackedInt32Array()
 
@@ -2136,6 +2137,18 @@ position = Vector2(6695, -23085)
 rotation = 3.14159
 scale = Vector2(1, 1.269)
 
+[node name="Spike162" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6887, -23273)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike163" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6949, -23273)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
 [node name="Spike155" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
 z_index = -1
 position = Vector2(6022, -23022)
@@ -2145,6 +2158,24 @@ scale = Vector2(0.9, 1.142)
 [node name="Spike154" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
 z_index = -1
 position = Vector2(6275, -22983)
+rotation = 1.5708
+scale = Vector2(0.9, 1.142)
+
+[node name="Spike170" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6949, -23129)
+rotation = -0.785398
+scale = Vector2(0.9, 1.142)
+
+[node name="Spike171" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6951, -23085)
+rotation = 3.14159
+scale = Vector2(0.9, 1.142)
+
+[node name="Spike172" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6993, -23128)
 rotation = 1.5708
 scale = Vector2(0.9, 1.142)
 
@@ -2159,6 +2190,147 @@ z_index = -1
 position = Vector2(6530, -23127)
 rotation = -1.5708
 scale = Vector2(0.9, 1.142)
+
+[node name="Spike164" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6845, -23327)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike165" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6845, -23389)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike166" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6844, -23451)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike167" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6844, -23513)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike168" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6842, -23573)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike169" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6842, -23635)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike173" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6844, -23633)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike174" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6843, -23695)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike175" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6843, -23757)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike176" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6841, -23817)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike177" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6841, -23879)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike178" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6998, -23322)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike179" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6998, -23384)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike180" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6997, -23446)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike181" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6997, -23508)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike182" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6995, -23568)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike183" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6995, -23630)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike184" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6997, -23628)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike185" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6996, -23690)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike186" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6996, -23752)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike187" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6994, -23812)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike188" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6994, -23874)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="HyperJump" parent="." instance=ExtResource("3_lmjtp")]
+position = Vector2(7308, -23248)
+scale = Vector2(0.3, 0.3)
+
+[node name="HyperSection" type="TileMap" parent="."]
+tile_set = ExtResource("7_n67yc")
+format = 2
+layer_0/tile_data = PackedInt32Array(-101318197, 458752, 4, -101318193, 524288, 4)
 
 [connection signal="collected" from="DoubleJump" to="Player" method="_on_double_jump_collected"]
 [connection signal="collected" from="WallJump" to="Player" method="_on_wall_jump_collected"]
@@ -2319,7 +2491,35 @@ scale = Vector2(0.9, 1.142)
 [connection signal="spiked" from="DashSection/SpikeSection4/Spike159" to="Player" method="_on_spike_spiked"]
 [connection signal="spiked" from="DashSection/SpikeSection4/Spike160" to="Player" method="_on_spike_spiked"]
 [connection signal="spiked" from="DashSection/SpikeSection4/Spike161" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike162" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike163" to="Player" method="_on_spike_spiked"]
 [connection signal="spiked" from="DashSection/SpikeSection4/Spike155" to="Player" method="_on_spike_spiked"]
 [connection signal="spiked" from="DashSection/SpikeSection4/Spike154" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike170" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike171" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike172" to="Player" method="_on_spike_spiked"]
 [connection signal="spiked" from="DashSection/SpikeSection4/Spike156" to="Player" method="_on_spike_spiked"]
 [connection signal="spiked" from="DashSection/SpikeSection4/Spike158" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike164" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike165" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike166" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike167" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike168" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike169" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike173" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike174" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike175" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike176" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike177" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike178" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike179" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike180" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike181" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike182" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike183" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike184" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike185" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike186" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike187" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike188" to="Player" method="_on_spike_spiked"]
+[connection signal="collected" from="HyperJump" to="Player" method="_on_hyper_jump_collected"]
