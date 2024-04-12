@@ -59,6 +59,8 @@ func _physics_process(delta):
 	if position.y > 2000 || Input.is_action_just_pressed("reset"):
 		die()
 		
+	$HyperJumpAnimation.hide()
+		
 	var horizontal_direction = Input.get_axis("move_left", "move_right")
 		
 	if dash and !dashing and Input.is_action_just_pressed("dash") and dashes > 0:
@@ -132,6 +134,7 @@ func _physics_process(delta):
 		if velocity.y < 0:
 			if hyper_jump:
 				velocity.y -= hyper_jump_boost
+				$HyperJumpAnimation.show()
 			else:
 				velocity.y -= jump_hover
 			
