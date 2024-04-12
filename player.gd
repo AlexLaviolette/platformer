@@ -205,5 +205,3 @@ func _on_spike_spiked(sender):
 	velocity.y = direction.y * spike_force
 	
 	dashing = false
-	
-	print(direction)

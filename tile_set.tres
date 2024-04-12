@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://b5y1xrxu7sj4n"]
+[gd_resource type="TileSet" load_steps=12 format=3 uid="uid://b5y1xrxu7sj4n"]
 
 [ext_resource type="Texture2D" uid="uid://svxmqe7a6fya" path="res://art/tilesheet_complete.png" id="1_fgkvb"]
 
@@ -25,6 +25,9 @@ tile_data = PackedInt32Array(0, 262144, 6, 262144, 0, 6, 524288, 0, 6, 786432, 0
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_knyhg"]
 tile_data = PackedInt32Array(0, 262144, 6, 262144, 0, 6, 524288, 0, 6, 786432, 0, 6)
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_co4wh"]
+tile_data = PackedInt32Array(0, 0, 0, 4, 0, 0, 8, 0, 0, 12, 0, 0, 16, 0, 0, 20, 0, 0, 24, 0, 0, 28, 0, 0)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_duqjo"]
 resource_name = "<null>"
@@ -1007,3 +1010,4 @@ pattern_4 = SubResource("TileMapPattern_em0gt")
 pattern_5 = SubResource("TileMapPattern_bxy21")
 pattern_6 = SubResource("TileMapPattern_xslgn")
 pattern_7 = SubResource("TileMapPattern_knyhg")
+pattern_8 = SubResource("TileMapPattern_co4wh")

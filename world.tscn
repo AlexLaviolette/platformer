@@ -1065,7 +1065,7 @@ point_count = 9
 
 [node name="Player" parent="." instance=ExtResource("1_jl6in")]
 z_index = 1
-position = Vector2(4780, -19021)
+position = Vector2(6628, -23246)
 scale = Vector2(2.2, 2.2)
 floor_stop_on_slope = false
 floor_max_angle = 0.802851
@@ -1223,22 +1223,1103 @@ scale = Vector2(0.3, 0.3)
 tile_set = ExtResource("7_n67yc")
 format = 2
 layer_0/name = "Environment"
-layer_0/tile_data = PackedInt32Array(-75890371, 131072, 0, -75890367, 131072, 0, -75890375, 262144, 2, -76152519, 262144, 1, -76414667, 262144, 1, -76152523, 262144, 2, -76414671, 262144, 2, -76676815, 262144, 1, -76676819, 393216, 1, -76938963, 0, 0, -77201107, 0, 0, -75628223, 0, 0, -75366079, 0, 0, -75103935, 0, 2, -74841791, 0, 0, -74579647, 0, 1, -74317503, 0, 0, -74579631, 0, 0, -74579627, 0, 1, -74841775, 65536, 0, -74841771, 196608, 0, -75497153, 0, 0, -75628226, 0, 0, -75693765, 0, 0, -76152527, 0, 2, -76414675, 0, 0, -77004501, 0, 0, -77135574, 0, 0, -77201111, 0, 0, -77463255, 65536, 0, -77463251, 196608, 0, -77266643, 0, 1, -77070037, 0, 2, -76283602, 0, 0, -75955915, 0, 0, -76807894, 0, 0, -76938966, 0, 0, -75366075, 0, 0, -75497147, 0, 0, -75562684, 0, 0, -75890363, 65536, 2, -76152507, 65536, 1, -76414647, 65536, 1, -76676787, 65536, 1, -76152503, 65536, 2, -76414643, 65536, 2, -75955912, 131072, 2, -76086982, 131072, 1, -76545741, 131072, 1, -76414639, 0, 0, -76414635, 0, 0, -76676775, 131072, 0, -76676771, 131072, 0, -76676767, 131072, 0, -76676763, 131072, 0, -76676759, 131072, 0, -75824803, 327680, 0, -75824799, 393216, 0, -75824795, 458752, 0, -76480170, 0, 0, -76676779, 131072, 0, -76676783, 131072, 0, -75693755, 0, 0, -75628218, 0, 0, -75759289, 0, 0, -75890360, 0, 0, -75955894, 0, 0, -76021428, 0, 0, -76152500, 0, 0, -76152498, 0, 0, -76283569, 0, 0, -76283567, 0, 0, -76349101, 0, 0, -76349104, 0, 1, -76414638, 0, 1, -76480151, 131072, 0, -76676755, 131072, 0, -76480147, 131072, 0, -76676751, 131072, 0, -76480143, 131072, 0, -76480139, 524288, 1, -76676747, 524288, 1, -76480155, 458752, 1)
+layer_0/tile_data = PackedInt32Array(-75890371, 131072, 0, -75890367, 131072, 0, -75890375, 262144, 2, -76152519, 262144, 1, -76414667, 262144, 1, -76152523, 262144, 2, -76414671, 262144, 2, -76676815, 262144, 1, -76676819, 393216, 1, -76938963, 0, 0, -77201107, 0, 0, -75628223, 0, 0, -75366079, 0, 0, -75103935, 0, 2, -74841791, 0, 0, -74579647, 0, 1, -74317503, 0, 0, -74579631, 0, 0, -74579627, 0, 1, -74841775, 65536, 0, -74841771, 196608, 0, -75497153, 0, 0, -75628226, 0, 0, -75693765, 0, 0, -76152527, 0, 2, -76414675, 0, 0, -77004501, 0, 0, -77135574, 0, 0, -77201111, 0, 0, -77463255, 65536, 0, -77463251, 196608, 0, -77266643, 0, 1, -77070037, 0, 2, -76283602, 0, 0, -75955915, 0, 0, -76807894, 0, 0, -76938966, 0, 0, -75366075, 0, 0, -75497147, 0, 0, -75562684, 0, 0, -75890363, 65536, 2, -76152507, 65536, 1, -76414647, 65536, 1, -76676787, 65536, 1, -76152503, 65536, 2, -76414643, 65536, 2, -75955912, 131072, 2, -76086982, 131072, 1, -76545741, 131072, 1, -76414639, 0, 0, -76414635, 0, 0, -76676775, 131072, 0, -76676771, 131072, 0, -76676767, 131072, 0, -76676763, 131072, 0, -76676759, 131072, 0, -75824803, 327680, 0, -75824799, 393216, 0, -75824795, 458752, 0, -76480170, 0, 0, -76676779, 131072, 0, -76676783, 131072, 0, -75693755, 0, 0, -75628218, 0, 0, -75759289, 0, 0, -75890360, 0, 0, -75955894, 0, 0, -76021428, 0, 0, -76152500, 0, 0, -76152498, 0, 0, -76283569, 0, 0, -76283567, 0, 0, -76349101, 0, 0, -76349104, 0, 1, -76414638, 0, 1, -76480151, 131072, 0, -76676755, 131072, 0, -76480147, 131072, 0, -76676751, 131072, 0, -76480143, 131072, 0, -76480139, 524288, 1, -76676747, 524288, 1, -76480155, 458752, 1, -78249683, 327680, 1, -78249687, 131072, 0, -78249691, 131072, 0, -78249695, 131072, 0, -78249699, 131072, 0, -78249703, 458752, 1, -78511827, 0, 2, -78773971, 0, 0, -79036115, 0, 0, -79298259, 0, 0, -79560399, 524288, 2, -79560403, 65536, 0, -81067757, 0, 0, -81329901, 327680, 1, -81592045, 0, 0, -81067761, 0, 0, -81329905, 131072, 0, -81329909, 131072, 0, -81329913, 65536, 0, -81854189, 0, 2, -82116333, 0, 0, -82378477, 0, 0, -82640621, 0, 0, -82902769, 458752, 2, -82902761, 524288, 2, -82902765, 131072, 0, -84147990, 0, 0, -84803366, 0, 0, -85655311, 0, 0, -86179575, 0, 0, -86179571, 0, 0, -86179567, 0, 0, -86179563, 0, 0, -86179559, 0, 0, -86179555, 0, 0, -86179551, 0, 0, -86179547, 0, 0, -86179543, 0, 0, -86179539, 0, 0, -86179535, 0, 0, -86179531, 0, 0, -86179527, 0, 0, -86179523, 0, 0, -86179519, 0, 0, -86179515, 0, 0, -87490276, 393216, 1, -87490272, 131072, 0, -87490268, 131072, 0, -87490264, 131072, 0, -87490260, 131072, 0, -87490256, 131072, 0, -87490252, 131072, 0, -87490248, 131072, 0, -86179511, 0, 0, -86441655, 0, 0, -86703799, 0, 0, -86703795, 0, 1, -86965939, 0, 0, -87228083, 0, 0, -87490227, 0, 0, -87752371, 0, 0, -88014515, 0, 0, -87752392, 0, 0, -88014536, 0, 0, -88276680, 0, 0, -88538824, 0, 0, -87752420, 0, 0, -88014564, 196608, 0, -88014568, 131072, 0, -88014572, 131072, 0, -88014576, 65536, 0, -88276659, 0, 0, -88538803, 0, 0, -87490244, 196608, 0, -88800947, 0, 0, -88800968, 0, 0, -89063112, 0, 0, -89325256, 0, 0, -89587400, 0, 0, -89849544, 65536, 0, -89849540, 131072, 0, -88932040, 0, 2, -86179540, 0, 2, -86179562, 0, 2, -89849536, 327680, 1, -90111680, 65536, 0, -90111676, 131072, 0, -90111672, 131072, 0, -90111668, 131072, 0, -90111664, 131072, 0, -90111660, 196608, 0, -89849516, 0, 0, -89587372, 393216, 1, -89587368, 131072, 0, -89587364, 196608, 0, -88800926, 0, 0, -89128692, 0, 0, -90046196, 327680, 1, -90308340, 0, 1, -90570484, 0, 0, -90832628, 0, 0, -91094772, 0, 0, -91356916, 0, 2, -91619060, 0, 0, -91881204, 0, 0, -92143348, 0, 0, -89128717, 0, 0, -89128744, 0, 0, -90046200, 131072, 0, -90046204, 131072, 0, -90046208, 131072, 0, -90046212, 131072, 0, -90046216, 131072, 0, -90046220, 131072, 0, -90046224, 131072, 0, -90046228, 131072, 0, -90046232, 131072, 0, -90046236, 131072, 0, -90046240, 131072, 0, -90046244, 131072, 0, -90046248, 131072, 0, -90046252, 131072, 0, -90046256, 65536, 0, -92405492, 262144, 0, -92667637, 1048576, 10, -81592056, 589824, 0, -79822545, 720896, 1, -83164905, 655360, 0, -79822544, 655360, 0, -77725396, 720896, 0, -76152516, 655360, 1, -76152515, 720896, 1, -76938894, 655360, 1, -75103915, 655360, 0, -92667538, 327680, 0, -92667534, 393216, 0, -92667530, 458752, 0, -88276713, 589824, 1, -90373823, 720896, 1, -89849508, 589824, 0, -87752394, 589824, 0, -88276712, 655360, 0, -90308395, 655360, 0, -92929674, 589824, 1, -94174843, 262144, 268435457, -94502536, 262144, 1, -94764646, 65536, 0, -94764642, 131072, 0, -94764638, 196608, 0, -95026785, 720896, 1)
 layer_1/name = "Spikes"
 layer_1/tile_data = PackedInt32Array()
 
-[node name="Spike2" parent="DashSection" instance=ExtResource("8_3nmbf")]
+[node name="SpikeSection1" type="Node" parent="DashSection"]
+
+[node name="Spike2" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
 position = Vector2(4871, -18798)
 rotation = 1.5708
 scale = Vector2(1, 1.269)
 
-[node name="Spike3" parent="DashSection" instance=ExtResource("8_3nmbf")]
+[node name="Spike3" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
 position = Vector2(4871, -18862)
 rotation = 1.5708
 scale = Vector2(1, 1.269)
 
+[node name="Spike4" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+position = Vector2(4825, -19048)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike5" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+position = Vector2(4757, -19048)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike6" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+position = Vector2(4690, -19048)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike7" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+position = Vector2(4622, -19048)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike8" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+position = Vector2(4555, -19048)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike9" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+position = Vector2(4873, -19098)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike10" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+position = Vector2(4873, -19161)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike11" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+position = Vector2(4872, -19226)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike12" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+position = Vector2(4872, -19290)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike13" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+position = Vector2(4872, -19351)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike14" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4896, -19401)
+rotation = 2.3562
+scale = Vector2(1, 1.269)
+
+[node name="Spike15" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4408, -19737)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike16" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4346, -19737)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike17" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4217, -19800)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike18" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4239, -19800)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike19" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4296, -19785)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike20" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4456, -19787)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike21" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4456, -19851)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike22" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4456, -19912)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike23" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4456, -20169)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike24" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4481, -20225)
+rotation = 2.35619
+scale = Vector2(1, 1.269)
+
+[node name="Spike25" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4339, -20219)
+rotation = -2.35619
+scale = Vector2(1, 1.269)
+
+[node name="Spike26" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4362, -20169)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike27" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3752, -20583)
+scale = Vector2(1, 1.269)
+
+[node name="Spike28" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3496, -20743)
+scale = Vector2(1, 1.269)
+
+[node name="Spike29" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3863, -20950)
+scale = Vector2(1, 1.269)
+
+[node name="Spike30" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3799, -20536)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike31" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3541, -20696)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike32" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3911, -20904)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike33" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3864, -20857)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike34" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3752, -20489)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike35" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3495, -20650)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike36" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3449, -20698)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike37" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3818, -20903)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike38" parent="DashSection/SpikeSection1" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3705, -20536)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="SpikeSection2" type="Node" parent="DashSection"]
+
+[node name="Spike39" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4248, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike40" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4311, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike41" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4373, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike42" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4436, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike43" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4499, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike44" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4562, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike56" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4553, -21306)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike57" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4616, -21306)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike58" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4678, -21306)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike67" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4360, -21436)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike68" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4423, -21436)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike69" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4485, -21436)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike59" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4741, -21306)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike60" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4804, -21306)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike61" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4867, -21306)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike45" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4624, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike46" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4687, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike47" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4749, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike48" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4812, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike49" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4874, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike50" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4937, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike51" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5000, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike52" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5063, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike53" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5125, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike95" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5334, -21717)
+scale = Vector2(1, 1.269)
+
+[node name="Spike109" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5670, -21716)
+scale = Vector2(1, 1.269)
+
+[node name="Spike54" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5188, -21079)
+scale = Vector2(1, 1.269)
+
+[node name="Spike55" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5209, -21078)
+scale = Vector2(1, 1.269)
+
+[node name="Spike72" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5274, -21203)
+scale = Vector2(1, 1.269)
+
+[node name="Spike62" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4932, -21305)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike63" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4998, -21305)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike70" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5062, -21304)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike96" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5060, -21884)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike97" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5124, -21884)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike98" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5187, -21960)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike99" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5248, -21960)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike111" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5671, -21625)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike100" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5316, -21960)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike101" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5382, -21959)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike105" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5446, -21843)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike106" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5514, -21843)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike107" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5577, -21843)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike71" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5101, -21349)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike75" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5036, -21414)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike76" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5035, -21477)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike84" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5041, -21542)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike85" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5045, -21603)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike110" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5717, -21672)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike87" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5044, -21665)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike88" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5046, -21728)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike89" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5045, -21790)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike90" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5046, -21728)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike91" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5045, -21790)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike102" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5158, -21936)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike92" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5045, -21855)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike112" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5605, -21863)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike64" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4506, -21413)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike65" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4202, -21033)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike86" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4323, -21478)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike66" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4508, -21351)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike73" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5227, -21164)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike77" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5306, -21237)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike78" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5307, -21302)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike79" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5306, -21366)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike80" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5303, -21425)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike103" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5419, -21928)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike104" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5418, -21865)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike81" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5299, -21486)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike82" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5295, -21550)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike83" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5291, -21608)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike93" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5290, -21670)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike108" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5625, -21672)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike94" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4956, -21641)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike74" parent="DashSection/SpikeSection2" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5229, -21102)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="SpikeSection3" type="Node" parent="DashSection"]
+
+[node name="Spike113" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4251, -21751)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike126" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4251, -21751)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike114" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4294, -21930)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike131" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4229, -21930)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike132" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4167, -21930)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike133" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4102, -21930)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike134" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4038, -21930)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike135" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3973, -21930)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike136" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3911, -21930)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike137" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3846, -21930)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike138" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3782, -21930)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike139" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3717, -21930)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike140" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3655, -21930)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike141" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3590, -21930)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike142" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3529, -21931)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike143" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3464, -21931)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike144" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3402, -21931)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike145" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3337, -21931)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike115" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4294, -21708)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike116" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4342, -21750)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike127" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3850, -21750)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike128" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3850, -21750)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike129" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3893, -21707)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike130" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3941, -21749)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike146" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3420, -21750)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike147" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3420, -21750)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike150" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3299, -21974)
+rotation = -1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike148" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3463, -21707)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike149" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(3511, -21749)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike117" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4342, -21975)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike118" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4342, -22039)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike119" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4343, -22102)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike120" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4343, -22166)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike121" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4343, -22230)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike122" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4343, -22294)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike123" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4344, -22357)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike124" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4344, -22421)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike125" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4344, -22483)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="Spike151" parent="DashSection/SpikeSection3" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(4343, -22528)
+rotation = 1.5708
+scale = Vector2(1, 1.269)
+
+[node name="SpikeSection4" type="Node2D" parent="DashSection"]
+
+[node name="Spike152" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6226, -22988)
+rotation = -0.785398
+scale = Vector2(0.9, 1.142)
+
+[node name="Spike157" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6032, -23071)
+rotation = 0.785398
+scale = Vector2(0.9, 1.142)
+
+[node name="Spike153" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6233, -22940)
+rotation = 3.14159
+scale = Vector2(0.9, 1.142)
+
+[node name="Spike159" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6571, -23085)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike160" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6633, -23085)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike161" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6695, -23085)
+rotation = 3.14159
+scale = Vector2(1, 1.269)
+
+[node name="Spike155" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6022, -23022)
+rotation = 3.14159
+scale = Vector2(0.9, 1.142)
+
+[node name="Spike154" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6275, -22983)
+rotation = 1.5708
+scale = Vector2(0.9, 1.142)
+
+[node name="Spike156" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(5979, -23065)
+rotation = -1.5708
+scale = Vector2(0.9, 1.142)
+
+[node name="Spike158" parent="DashSection/SpikeSection4" instance=ExtResource("8_3nmbf")]
+z_index = -1
+position = Vector2(6530, -23127)
+rotation = -1.5708
+scale = Vector2(0.9, 1.142)
+
 [connection signal="collected" from="DoubleJump" to="Player" method="_on_double_jump_collected"]
 [connection signal="collected" from="WallJump" to="Player" method="_on_wall_jump_collected"]
 [connection signal="collected" from="Dash" to="Player" method="_on_dash_collected"]
-[connection signal="spiked" from="DashSection/Spike2" to="Player" method="_on_spike_spiked"]
-[connection signal="spiked" from="DashSection/Spike3" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike2" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike3" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike4" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike5" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike6" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike7" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike8" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike9" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike10" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike11" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike12" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike13" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike14" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike15" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike16" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike17" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike18" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike19" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike20" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike21" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike22" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike23" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike24" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike25" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike26" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike27" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike28" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike29" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike30" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike31" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike32" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike33" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike34" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike35" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike36" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike37" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection1/Spike38" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike39" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike40" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike41" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike42" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike43" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike44" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike56" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike57" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike58" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike67" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike68" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike69" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike59" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike60" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike61" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike45" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike46" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike47" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike48" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike49" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike50" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike51" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike52" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike53" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike95" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike109" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike54" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike55" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike72" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike62" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike63" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike70" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike96" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike97" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike98" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike99" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike111" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike100" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike101" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike105" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike106" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike107" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike71" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike75" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike76" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike84" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike85" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike110" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike87" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike88" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike89" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike90" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike91" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike102" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike92" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike112" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike64" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike65" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike86" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike66" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike73" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike77" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike78" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike79" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike80" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike103" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike104" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike81" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike82" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike83" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike93" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike108" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike94" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection2/Spike74" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike113" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike126" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike114" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike131" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike132" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike133" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike134" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike135" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike136" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike137" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike138" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike139" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike140" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike141" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike142" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike143" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike144" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike145" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike115" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike116" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike127" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike128" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike129" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike130" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike146" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike147" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike150" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike148" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike149" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike117" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike118" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike119" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike120" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike121" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike122" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike123" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike124" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike125" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection3/Spike151" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike152" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike157" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike153" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike159" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike160" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike161" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike155" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike154" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike156" to="Player" method="_on_spike_spiked"]
+[connection signal="spiked" from="DashSection/SpikeSection4/Spike158" to="Player" method="_on_spike_spiked"]
