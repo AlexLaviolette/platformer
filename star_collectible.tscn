@@ -110,8 +110,8 @@ shape = SubResource("RectangleShape2D_qrtrd")
 stream = ExtResource("3_xxusw")
 volume_db = -10.0
 autoplay = true
-max_distance = 800.0
-attenuation = 2.14355
+max_distance = 1800.0
+attenuation = 1.7411
 
 [node name="CollectSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_nx1cc")
@@ -122,6 +122,11 @@ scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_d80iw")
 animation = &"star"
 autoplay = "star"
-frame_progress = 0.0625406
+frame_progress = 0.983698
+
+[node name="ShowAgain" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
 
 [connection signal="body_entered" from="PickupArea" to="." method="_on_pickup_area_body_entered"]
+[connection signal="timeout" from="ShowAgain" to="." method="_on_show_again_timeout"]
