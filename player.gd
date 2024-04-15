@@ -28,6 +28,7 @@ var dashing := false
 var dash_to := 0.0
 
 signal dead
+signal complete
 
 func _ready():
 	respawn = position # Save initial position as respawn position
@@ -218,3 +219,11 @@ func _on_spike_spiked(sender):
 
 func _on_hyper_jump_collected():
 	hyper_jump = true
+
+
+func _on_star_collectible_collected():
+	velocity.x = 0
+	velocity.y = 0
+	dashing = false
+	position = respawn
+	complete.emit()

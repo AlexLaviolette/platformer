@@ -356,5 +356,6 @@ volume_db = -20.0
 stream = ExtResource("11_3ti8e")
 volume_db = -12.0
 
+[connection signal="complete" from="." to="Camera2D/HUD" method="_on_player_complete"]
 [connection signal="dead" from="." to="Camera2D/HUD" method="_on_player_dead"]
 [connection signal="start_game" from="Camera2D/HUD" to="." method="_on_hud_start_game"]

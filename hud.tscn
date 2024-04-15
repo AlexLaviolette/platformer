@@ -140,5 +140,71 @@ volume_db = -40.0
 [node name="RandomizeWind" type="Timer" parent="Menu"]
 one_shot = true
 
+[node name="Victory" type="Node" parent="."]
+
+[node name="VictoryText" type="Control" parent="Victory"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Skull2" type="Sprite2D" parent="Victory/VictoryText"]
+position = Vector2(1165, 318)
+rotation = 3.14159
+scale = Vector2(0.04, -0.04)
+texture = ExtResource("2_848jg")
+
+[node name="TimeLabel" type="Label" parent="Victory/VictoryText"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 856.0
+offset_right = 1504.0
+offset_bottom = 240.0
+grow_horizontal = 2
+theme = ExtResource("2_pgec4")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 200
+text = "--:--:--
+"
+horizontal_alignment = 1
+
+[node name="DeathLabel" type="Label" parent="Victory/VictoryText"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 1192.0
+offset_top = 264.0
+offset_right = 1840.0
+offset_bottom = 504.0
+grow_horizontal = 2
+theme = ExtResource("2_pgec4")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 5
+theme_override_constants/outline_size = 5
+theme_override_constants/shadow_outline_size = 5
+theme_override_font_sizes/font_size = 84
+text = "0
+"
+
+[node name="FlashTimer" type="Timer" parent="Victory"]
+wait_time = 0.3
+
+[node name="ShowTimer" type="Timer" parent="Victory"]
+wait_time = 10.0
+one_shot = true
+
 [connection signal="start_game" from="Menu" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Menu/StartButton" to="Menu" method="_on_start_button_pressed"]
+[connection signal="timeout" from="Victory/FlashTimer" to="." method="_on_flash_timer_timeout"]
+[connection signal="timeout" from="Victory/ShowTimer" to="." method="_on_show_timer_timeout"]

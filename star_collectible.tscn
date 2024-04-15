@@ -1,0 +1,127 @@
+[gd_scene load_steps=16 format=3 uid="uid://pjalc0tv3jeh"]
+
+[ext_resource type="Script" path="res://collectible.gd" id="1_a3cbk"]
+[ext_resource type="AudioStream" uid="uid://i1mold5hsdnh" path="res://sound/glow.mp3" id="3_xxusw"]
+[ext_resource type="AudioStream" uid="uid://bux4dac51vdpy" path="res://sound/collect.mp3" id="4_nx1cc"]
+[ext_resource type="Texture2D" uid="uid://bj1oj227h2gu8" path="res://art/star_sheet.png" id="5_ie8og"]
+
+[sub_resource type="GDScript" id="GDScript_q77bp"]
+script/source = "extends Area2D
+
+signal collected
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+func _on_body_entered(body):
+	hide() # Player disappears after being hit.
+	collected.emit()
+	# Must be deferred as we can't change physics properties on a physics callback.
+	$CollisionShape2D.set_deferred(\"disabled\", true)
+	print(\"I been hit bro\")
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qrtrd"]
+size = Vector2(515, 263)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyn2c"]
+atlas = ExtResource("5_ie8og")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3og0p"]
+atlas = ExtResource("5_ie8og")
+region = Rect2(500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lsned"]
+atlas = ExtResource("5_ie8og")
+region = Rect2(1000, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4ev2"]
+atlas = ExtResource("5_ie8og")
+region = Rect2(1500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klicw"]
+atlas = ExtResource("5_ie8og")
+region = Rect2(2000, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbfif"]
+atlas = ExtResource("5_ie8og")
+region = Rect2(0, 500, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_018xw"]
+atlas = ExtResource("5_ie8og")
+region = Rect2(500, 500, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5f76i"]
+atlas = ExtResource("5_ie8og")
+region = Rect2(1000, 500, 500, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d80iw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyn2c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3og0p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lsned")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4ev2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klicw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbfif")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_018xw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5f76i")
+}],
+"loop": true,
+"name": &"star",
+"speed": 5.0
+}]
+
+[node name="StarCollectible" type="Node2D"]
+position = Vector2(1, 0)
+script = ExtResource("1_a3cbk")
+
+[node name="PickupArea" type="Area2D" parent="."]
+scale = Vector2(0.559999, 1)
+script = SubResource("GDScript_q77bp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea"]
+position = Vector2(-2.5, 1.5)
+shape = SubResource("RectangleShape2D_qrtrd")
+
+[node name="GlowSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_xxusw")
+volume_db = -10.0
+autoplay = true
+max_distance = 800.0
+attenuation = 2.14355
+
+[node name="CollectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_nx1cc")
+volume_db = -10.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_d80iw")
+animation = &"star"
+autoplay = "star"
+frame_progress = 0.0625406
+
+[connection signal="body_entered" from="PickupArea" to="." method="_on_pickup_area_body_entered"]
