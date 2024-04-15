@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://pjalc0tv3jeh"]
 
-[ext_resource type="Script" path="res://collectible.gd" id="1_a3cbk"]
+[ext_resource type="Script" path="res://star_collectible.gd" id="1_vtg2p"]
 [ext_resource type="AudioStream" uid="uid://i1mold5hsdnh" path="res://sound/glow.mp3" id="3_xxusw"]
 [ext_resource type="AudioStream" uid="uid://bux4dac51vdpy" path="res://sound/collect.mp3" id="4_nx1cc"]
 [ext_resource type="Texture2D" uid="uid://bj1oj227h2gu8" path="res://art/star_sheet.png" id="5_ie8og"]
@@ -96,7 +96,7 @@ animations = [{
 
 [node name="StarCollectible" type="Node2D"]
 position = Vector2(1, 0)
-script = ExtResource("1_a3cbk")
+script = ExtResource("1_vtg2p")
 
 [node name="PickupArea" type="Area2D" parent="."]
 scale = Vector2(0.559999, 1)
@@ -122,7 +122,7 @@ scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_d80iw")
 animation = &"star"
 autoplay = "star"
-frame_progress = 0.151064
+frame_progress = 0.8289
 
 [node name="ShowAgain" type="Timer" parent="."]
 wait_time = 10.0

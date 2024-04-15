@@ -4,7 +4,7 @@ signal collected
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$CollectibleName.text = name
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -22,3 +22,11 @@ func _on_pickup_area_body_entered(body):
 		$CollectSound.play()
 		
 		print("Collected " + name)
+		
+		$ShowAgain.start()
+
+
+func _on_show_again_timeout():
+	show()
+	$GlowSound.play()
+	$PickupArea/CollisionShape2D.disabled = false
