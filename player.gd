@@ -66,6 +66,7 @@ func _physics_process(delta):
 		
 	if dash and !dashing and Input.is_action_just_pressed("dash") and dashes > 0:
 		dashing = true
+		$DashIntrusctions.hide()
 		dashes -= 1
 		velocity.y = 0
 		velocity.x = 0
@@ -206,6 +207,7 @@ func _on_hud_start_game():
 
 func _on_dash_collected():
 	dash = true
+	$DashIntrusctions.show()
 
 
 func _on_spike_spiked(sender):

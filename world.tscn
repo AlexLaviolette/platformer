@@ -1071,7 +1071,7 @@ texture = ExtResource("9_6sbh3")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -21.9203, -32.1734, -48, 32.8805, -48, 48, -48, 48, 48, 13.435, 44.1942, -8.13173, 23.6881, -48, 1.06065)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-48, -21.9203, -32.1734, -48, 48, -48, 48, 48, 13.435, 44.1942, -8.13173, 23.6881, -48, 1.06065)
 6:0/size_in_atlas = Vector2i(6, 6)
 6:0/0 = 0
 6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -1175,7 +1175,7 @@ animations = [{
 
 [node name="Player" parent="." instance=ExtResource("1_jl6in")]
 z_index = 1
-position = Vector2(11787, -37805)
+position = Vector2(696, 1044)
 scale = Vector2(2.2, 2.2)
 floor_stop_on_slope = false
 floor_max_angle = 0.802851
@@ -2482,7 +2482,7 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_aouf3")
 animation = &"twinkle"
 autoplay = "twinkle"
-frame_progress = 0.202191
+frame_progress = 0.352019
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="SparklingStars"]
 z_index = -1
@@ -2572,7 +2572,7 @@ scale = Vector2(-2, -2)
 sprite_frames = SubResource("SpriteFrames_aouf3")
 animation = &"twinkle"
 autoplay = "twinkle"
-frame_progress = 0.610016
+frame_progress = 0.759844
 
 [node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="SparklingStars"]
 z_index = -1

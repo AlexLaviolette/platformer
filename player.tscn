@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://ouvpieckk8x"]
+[gd_scene load_steps=49 format=3 uid="uid://ouvpieckk8x"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_3vani"]
 [ext_resource type="Texture2D" uid="uid://bwy71ytwfv2ry" path="res://art/Jump.png" id="2_o5fkj"]
@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://clwxdcw6c4p6n" path="res://sound/jump.mp3" id="9_3um25"]
 [ext_resource type="AudioStream" uid="uid://cbes3xuw3dcui" path="res://sound/cling.mp3" id="10_24la4"]
 [ext_resource type="AudioStream" uid="uid://dno0so046h8r2" path="res://sound/dead.mp3" id="11_3ti8e"]
+[ext_resource type="Theme" uid="uid://dytq4r0fbduj6" path="res://hud.tres" id="14_6w2yn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1qo1q"]
 atlas = ExtResource("7_ognru")
@@ -355,6 +356,30 @@ volume_db = -20.0
 [node name="DeadAudio" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_3ti8e")
 volume_db = -12.0
+
+[node name="DashIntrusctions" type="Label" parent="."]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -47.0
+offset_right = 64.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("14_6w2yn")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/outline_size = 2
+theme_override_constants/shadow_outline_size = 2
+theme_override_font_sizes/font_size = 24
+text = "Press (d) to dash"
+horizontal_alignment = 1
 
 [connection signal="complete" from="." to="Camera2D/HUD" method="_on_player_complete"]
 [connection signal="dead" from="." to="Camera2D/HUD" method="_on_player_dead"]
