@@ -122,7 +122,7 @@ scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_d80iw")
 animation = &"star"
 autoplay = "star"
-frame_progress = 0.983698
+frame_progress = 0.151064
 
 [node name="ShowAgain" type="Timer" parent="."]
 wait_time = 10.0

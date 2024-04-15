@@ -1103,14 +1103,10 @@ point_count = 2
 
 [node name="Player" parent="." instance=ExtResource("1_jl6in")]
 z_index = 1
-position = Vector2(12666, -37505)
+position = Vector2(702, 1030)
 scale = Vector2(2.2, 2.2)
 floor_stop_on_slope = false
 floor_max_angle = 0.802851
-double_jump = true
-wall_jump = true
-dash = true
-hyper_jump = true
 
 [node name="GrassSection" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_nc7fx")
