@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://ynakmav11in0"]
+[gd_scene load_steps=41 format=3 uid="uid://ynakmav11in0"]
 
 [ext_resource type="PackedScene" uid="uid://ouvpieckk8x" path="res://player.tscn" id="1_jl6in"]
 [ext_resource type="PackedScene" uid="uid://j7sbw3pr7cy7" path="res://moving_platform.tscn" id="2_6xqyy"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ddp0ebkkhcbul" path="res://art/cloud-platform.png" id="9_6sbh3"]
 [ext_resource type="PackedScene" uid="uid://dpidkxfoyrdl0" path="res://cloud_platform.tscn" id="10_wsyls"]
 [ext_resource type="PackedScene" uid="uid://pjalc0tv3jeh" path="res://star_collectible.tscn" id="11_bdo8o"]
+[ext_resource type="Texture2D" uid="uid://b2qe5fk578opg" path="res://art/star_bg_sprite_sheet.png" id="12_x56f1"]
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_xe46n"]
 tile_data = PackedInt32Array(0, 327680, 6, 1, 393216, 6, 2, 393216, 6, 3, 458752, 6)
@@ -1099,11 +1100,82 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7fqu"]
+atlas = ExtResource("12_x56f1")
+region = Rect2(0, 0, 497, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icy83"]
+atlas = ExtResource("12_x56f1")
+region = Rect2(497, 0, 497, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mcp03"]
+atlas = ExtResource("12_x56f1")
+region = Rect2(994, 0, 497, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qsqr"]
+atlas = ExtResource("12_x56f1")
+region = Rect2(1491, 0, 497, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4ak7"]
+atlas = ExtResource("12_x56f1")
+region = Rect2(1988, 0, 497, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4224b"]
+atlas = ExtResource("12_x56f1")
+region = Rect2(0, 120, 497, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uh1mc"]
+atlas = ExtResource("12_x56f1")
+region = Rect2(497, 120, 497, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnkrg"]
+atlas = ExtResource("12_x56f1")
+region = Rect2(994, 120, 497, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mnasa"]
+atlas = ExtResource("12_x56f1")
+region = Rect2(1491, 120, 497, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aouf3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7fqu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icy83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mcp03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qsqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4ak7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4224b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uh1mc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnkrg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mnasa")
+}],
+"loop": true,
+"name": &"twinkle",
+"speed": 6.0
+}]
+
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_jl6in")]
 z_index = 1
-position = Vector2(702, 1030)
+position = Vector2(11787, -37805)
 scale = Vector2(2.2, 2.2)
 floor_stop_on_slope = false
 floor_max_angle = 0.802851
@@ -2400,6 +2472,116 @@ speed_scale = 0.4
 [node name="StarCollectible" parent="." instance=ExtResource("11_bdo8o")]
 position = Vector2(13708, -37611)
 scale = Vector2(0.5, 0.5)
+
+[node name="SparklingStars" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="SparklingStars"]
+z_index = -1
+position = Vector2(10976, -37200)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_aouf3")
+animation = &"twinkle"
+autoplay = "twinkle"
+frame_progress = 0.202191
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="SparklingStars"]
+z_index = -1
+position = Vector2(11091, -36910)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_aouf3")
+animation = &"twinkle"
+autoplay = "twinkle"
+frame_progress = 0.40286
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="SparklingStars"]
+z_index = -1
+position = Vector2(12039, -37081)
+scale = Vector2(-2, -2)
+sprite_frames = SubResource("SpriteFrames_aouf3")
+animation = &"twinkle"
+autoplay = "twinkle"
+frame_progress = 0.40286
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="SparklingStars"]
+z_index = -1
+position = Vector2(12402, -36735)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_aouf3")
+animation = &"twinkle"
+autoplay = "twinkle"
+frame_progress = 0.40286
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="SparklingStars"]
+z_index = -1
+position = Vector2(13672, -37463)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_aouf3")
+animation = &"twinkle"
+autoplay = "twinkle"
+frame_progress = 0.40286
+
+[node name="AnimatedSprite2D12" type="AnimatedSprite2D" parent="SparklingStars"]
+z_index = -1
+position = Vector2(11742, -36579)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_aouf3")
+animation = &"twinkle"
+autoplay = "twinkle"
+frame_progress = 0.40286
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="SparklingStars"]
+z_index = -1
+position = Vector2(13727, -37725)
+scale = Vector2(-2, -2)
+sprite_frames = SubResource("SpriteFrames_aouf3")
+animation = &"twinkle"
+autoplay = "twinkle"
+frame_progress = 0.40286
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="SparklingStars"]
+z_index = -1
+position = Vector2(11780, -36921)
+scale = Vector2(-2, 2)
+sprite_frames = SubResource("SpriteFrames_aouf3")
+animation = &"twinkle"
+autoplay = "twinkle"
+frame_progress = 0.40286
+
+[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="SparklingStars"]
+z_index = -1
+position = Vector2(10936, -37013)
+scale = Vector2(-2, 2)
+sprite_frames = SubResource("SpriteFrames_aouf3")
+animation = &"twinkle"
+autoplay = "twinkle"
+frame_progress = 0.40286
+
+[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="SparklingStars"]
+z_index = -1
+position = Vector2(12471, -36932)
+scale = Vector2(-2, 2)
+sprite_frames = SubResource("SpriteFrames_aouf3")
+animation = &"twinkle"
+autoplay = "twinkle"
+frame_progress = 0.40286
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="SparklingStars"]
+z_index = -1
+position = Vector2(12773, -37234)
+scale = Vector2(-2, -2)
+sprite_frames = SubResource("SpriteFrames_aouf3")
+animation = &"twinkle"
+autoplay = "twinkle"
+frame_progress = 0.610016
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="SparklingStars"]
+z_index = -1
+position = Vector2(11041, -36712)
+scale = Vector2(-2, -2)
+sprite_frames = SubResource("SpriteFrames_aouf3")
+animation = &"twinkle"
+autoplay = "twinkle"
+frame_progress = 0.233245
 
 [connection signal="collected" from="DoubleJump" to="Player" method="_on_double_jump_collected"]
 [connection signal="collected" from="WallJump" to="Player" method="_on_wall_jump_collected"]
